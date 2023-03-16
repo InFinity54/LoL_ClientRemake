@@ -1,0 +1,105 @@
+{
+  "name": "fr.infinity54.lol_clientremake",
+  "productName": "League of Legends Client Remake",
+  "version": "1.0.0",
+  "description": "Recreation of League of Legends client.",
+  "license": "CC-BY-SA-4.0",
+  "main": ".webpack/main",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "build": "electron-builder build",
+    "make": "yarn package && yarn build"
+  },
+  "author": {
+    "name": "InFinity_54",
+    "email": "contact@infinity54.fr"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "@electron-forge/plugin-webpack": "^6.0.4",
+    "@vercel/webpack-asset-relocator-loader": "1.7.3",
+    "css-loader": "^6.0.0",
+    "electron": "23.1.0",
+    "electron-builder": "^24.0.0-alpha.12",
+    "file-loader": "^6.2.0",
+    "node-loader": "^2.0.0",
+    "raw-loader": "^4.0.2",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.0.0",
+    "twig-html-loader": "^0.1.9"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^5.3.0",
+    "jquery": "^3.6.3",
+    "node-fetch": "^3.3.0"
+  },
+  "build": {
+    "appId": "fr.infinity54.lol_clientremake",
+    "productName": "League of Legends Client Remake",
+    "files": [
+      "./.webpack/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./icon.ico",
+      "requestedExecutionLevel": "asInvoker",
+      "publish": {
+        "provider": "generic",
+        "url": "http://localhost"
+      }
+    },
+    "nsis": {
+      "artifactName": "LoL_ClientRemake_Setup_${version}.${ext}",
+      "installerIcon": "./icon.ico",
+      "uninstallerIcon": "./icon.ico",
+      "uninstallDisplayName": "League of Legends Client Remake",
+      "deleteAppDataOnUninstall": true,
+      "installerLanguages": [
+        "fr_FR"
+      ],
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "League of Legends Client Remake",
+      "oneClick": true,
+      "perMachine": false
+    },
+    "linux": {
+      "artifactName": "LoL_ClientRemake_${version}.${ext}",
+      "target": [
+        "AppImage"
+      ],
+      "icon": "./icon.png",
+      "publish": {
+        "provider": "generic",
+        "url": "http://localhost"
+      }
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "./icon.icns",
+      "darkModeSupport": false,
+      "publish": {
+        "provider": "generic",
+        "url": "http://localhost"
+      }
+    },
+    "dmg": {
+      "backgroundColor": "#161616",
+      "icon": "./icon.icns",
+      "title": "LoL_ClientRemake"
+    },
+    "asar": null
+  }
+}

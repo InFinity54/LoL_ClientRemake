@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #010a13;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
