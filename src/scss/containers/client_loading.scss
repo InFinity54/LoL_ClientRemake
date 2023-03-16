@@ -1,0 +1,79 @@
+#clientLoading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #010a13;
+  background-image: url("../../../img/startup_background.jpg");
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 999;
+
+  #clientLoading_ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 505px;
+    height: 505px;
+    background-image: url("../../../img/startup_ring.png");
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    animation: ringRotation 90s linear infinite;
+    opacity: 50%;
+  }
+
+  #clientLoading_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -71%);
+    background-image: url("../../../img/lol_icon.png");
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  #clientLoading_progressText {
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    width: 150px;
+    height: 15px;
+    transform: translate(calc(-50% - 1px), -3px);
+    font-family: 'Beaufort for LoL', serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+    text-align: center;
+    line-height: 100%;
+    color: #c8aa6e;
+  }
+
+  #clientLoading_progressBar {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    width: 200px;
+    height: 12px;
+    transform: translate(-50%, -5.5px);
+    border: 1px solid #c8aa6e;
+    border-radius: 10px;
+    overflow: hidden;
+
+    #clientLoading_currentProgress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, #005a82 0%, #6bc8d2 100%);
+      transition: width 0.25s;
+    }
+  }
+}
