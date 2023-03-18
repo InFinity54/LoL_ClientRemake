@@ -1,3 +1,5 @@
+import { startLoginScreenVideo } from "./containers/client_login/video";
+import { startLoginScreenMusic } from "./containers/client_login/music";
 const loadingProgressBar = jQuery("#clientLoading_currentProgress");
 const loadingProgressText = jQuery("#clientLoading_progressText");
 
@@ -20,8 +22,20 @@ window.updaterAPI.noUpdateAvailable((event) => {
   loadingProgressBar.css("width", "100%");
 
   setTimeout(() => {
+    if (window.appSettings.loginScreen.videoEnabled) {
+      startLoginScreenVideo();
+    } else {
+      jQuery("#clientLogin_videoArea_controls_videoSettings_disableVideo").attr("checked", "checked");
+    }
+
+    if (window.appSettings.loginScreen.soundEnabled) {
+      startLoginScreenMusic();
+    } else {
+      jQuery("#clientLogin_videoArea_controls_videoSettings_disableVideoSound").attr("checked", "checked");
+    }
+
     jQuery("#clientLoading").fadeOut(500);
-    jQuery("#clientLogin").fadeIn(500);
+    jQuery("#clientLogin").css("display", "flex").hide().fadeIn(500);
   }, 500);
 
   setTimeout(() => {

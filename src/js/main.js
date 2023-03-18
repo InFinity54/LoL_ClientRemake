@@ -3,7 +3,7 @@ import { autoUpdater } from "electron-updater";
 const path = require('path');
 const fs = require("fs");
 
-const isInProdMode = true;
+const isInProdMode = false;
 const settingsFilePath = path.join(app.getPath("userData"), "settings.json");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
