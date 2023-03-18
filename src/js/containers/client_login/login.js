@@ -2,6 +2,8 @@ const loginForm_username = jQuery("#clientLogin_authArea_authForm_username");
 const loginForm_password = jQuery("#clientLogin_authArea_authForm_password");
 const rememberMe = jQuery("#clientLogin_authArea_authForm_rememberMe");
 const loginButton = jQuery("#clientLogin_signInButton");
+const forgotUsernameLink = jQuery("#clientLogin_forgotUsernameLink");
+const forgotPasswordLink = jQuery("#clientLogin_forgotPasswordLink");
 
 loginForm_username.on("input", (event) => {
   enableLoginButton();
@@ -29,4 +31,12 @@ loginButton.on("click", (event) => {
   }
 
   alert(alertText);
+});
+
+forgotUsernameLink.on("click", (event) => {
+  window.appApi.openLink("https://recovery.riotgames.com/fr/forgot-username");
+});
+
+forgotPasswordLink.on("click", (event) => {
+  window.appApi.openLink("https://recovery.riotgames.com/fr/forgot-password");
 });
