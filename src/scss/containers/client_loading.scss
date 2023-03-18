@@ -5,11 +5,12 @@
   width: 100vw;
   height: 100vh;
   background-color: #010a13;
-  background-image: url("../../../img/startup_background.jpg");
+  background-image: url("../../../img/containers/startup/startup_background.jpg");
   background-position: center center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  z-index: 999;
+  z-index: 1000;
+  display: none;
 
   #clientLoading_ring {
     position: absolute;
@@ -17,7 +18,7 @@
     left: 50%;
     width: 505px;
     height: 505px;
-    background-image: url("../../../img/startup_ring.png");
+    background-image: url("../../../img/containers/startup/startup_ring.png");
     background-position: center center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -33,7 +34,7 @@
     width: 150px;
     height: 150px;
     transform: translate(-50%, -71%);
-    background-image: url("../../../img/lol_icon.png");
+    background-image: url("../../../img/brands/lol/lol_icon.png");
     background-position: center center;
     background-size: 100% 100%;
     background-repeat: no-repeat;

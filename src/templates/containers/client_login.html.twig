@@ -1,0 +1,88 @@
+<div id="clientLogin">
+    <div id="clientLogin_videoArea">
+        <video id="clientLogin_videoArea_player"></video>
+        <div id="clientLogin_videoArea_controls">
+            <div id="clientLogin_videoArea_controls_riotLogo"></div>
+            <div id="clientLogin_videoArea_controls_separator"></div>
+            <div id="clientLogin_videoArea_controls_videoSettings">
+                <div class="form_checkbox_group" id="clientLogin_videoArea_controls_videoSettings_disableVideoContainer">
+                    <input type="checkbox" id="clientLogin_videoArea_controls_videoSettings_disableVideo" name="clientLogin_authArea_authForm_rememberMe" />
+                    <label for="clientLogin_videoArea_controls_videoSettings_disableVideo">Désactiver l'animation de l'écran de connexion</label>
+                </div>
+
+                <div class="form_checkbox_group" id="clientLogin_videoArea_controls_videoSettings_disableVideoSoundContainer">
+                    <input type="checkbox" id="clientLogin_videoArea_controls_videoSettings_disableVideoSound" name="clientLogin_authArea_authForm_rememberMe" />
+                    <label for="clientLogin_videoArea_controls_videoSettings_disableVideoSound">Désactiver la musique de l'écran de connexion</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="clientLogin_authArea">
+        <!-- todo: window buttons -->
+
+        <div id="clientLogin_authArea_leagueLogo"></div>
+        <div id="clientLogin_authArea_title">Connexion</div>
+
+        <div class="form_inputText_group" id="clientLogin_authArea_authForm_usernameContainer">
+            <label for="clientLogin_authArea_authForm_username">Nom d'utilisateur</label>
+            <input type="text" id="clientLogin_authArea_authForm_username" name="clientLogin_authArea_authForm_username" required minlength="3" maxlength="16" />
+        </div>
+
+        <div class="form_inputPassword_group" id="clientLogin_authArea_authForm_passwordContainer">
+            <label for="clientLogin_authArea_authForm_password">Mot de passe</label>
+            <input type="password" id="clientLogin_authArea_authForm_password" name="clientLogin_authArea_authForm_password" required />
+        </div>
+
+        <div class="form_checkbox_group" id="clientLogin_authArea_authForm_rememberMeContainer">
+            <input type="checkbox" id="clientLogin_authArea_authForm_rememberMe" name="clientLogin_authArea_authForm_rememberMe" />
+            <label for="clientLogin_authArea_authForm_rememberMe">Se souvenir de moi</label>
+        </div>
+
+        <div class="form_select_group" id="clientLogin_authArea_authForm_regionContainer">
+            <label>Régions</label>
+
+            <div class="form_select">
+                <span class="form_select_selectedOption" id="clientLogin_authArea_authForm_region" data-value="euw1">Europe (Ouest)</span>
+            </div>
+
+            <div class="form_select_optionsContainer">
+                <div class="form_select_option" data-value="na1">Amérique du Nord</div>
+                <div class="form_select_option" data-value="la1">Amérique Latine (Nord)</div>
+                <div class="form_select_option" data-value="la2">Amérique Latine (Sud)</div>
+                <div class="form_select_option" data-value="br1">Brésil</div>
+                <div class="form_select_option" data-value="kr">Corée du Sud</div>
+                <div class="form_select_option" data-value="eun1">Europe (Nord/Est)</div>
+                <div class="form_select_option selected" data-value="euw1">Europe (Ouest)</div>
+                <div class="form_select_option" data-value="jp1">Japon</div>
+                <div class="form_select_option" data-value="oc1">Océanie</div>
+                <div class="form_select_option" data-value="ph2">Philippines</div>
+                <div class="form_select_option" data-value="ru">Russie</div>
+                <div class="form_select_option" data-value="sg2">Singapour</div>
+                <div class="form_select_option" data-value="tw2">Taïwan</div>
+                <div class="form_select_option" data-value="th2">Thaïlande</div>
+                <div class="form_select_option" data-value="tr1">Turquie</div>
+                <div class="form_select_option" data-value="vn2">Vietnam</div>
+            </div>
+        </div>
+
+        <div class="form_select_group" id="clientLogin_authArea_authForm_languageContainer">
+            <label>Langue</label>
+
+            <div class="form_select">
+                <span class="form_select_selectedOption" id="clientLogin_authArea_authForm_language" data-value="fr_FR">Français</span>
+            </div>
+
+            <div class="form_select_optionsContainer">
+                <div class="form_select_option selected" data-value="fr_fr">Français</div>
+            </div>
+        </div>
+
+        <button class="defaultButton" id="clientLogin_signInButton" disabled>Connexion</button>
+        <button class="defaultButton" id="clientLogin_createAccountButton">Créer un compte <i class="external_link"></i></button> <!-- todo: link -->
+        <a href="#" id="clientLogin_forgotUsernameLink">Identifiant oublié ? <i class="external_link"></i></a> <!-- todo: link -->
+        <a href="#" id="clientLogin_forgotPasswordLink">Mot de passe oublié ? <i class="external_link"></i></a> <!-- todo: link -->
+
+        <div id="clientLogin_version">V13.5.497.3109</div>
+    </div>
+</div>

@@ -4,6 +4,14 @@
 
 /* CSS global */
 @import "global";
+@import "ui/icons";
+@import "ui/link";
+@import "ui/buttons/default_button";
+@import "ui/form/checkbox";
+@import "ui/form/password";
+@import "ui/form/select";
+@import "ui/form/text";
 
 /* CSS des conteneurs */
+@import "containers/client_login";
 @import "containers/client_loading";

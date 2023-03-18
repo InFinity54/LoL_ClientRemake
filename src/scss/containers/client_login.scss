@@ -1,0 +1,159 @@
+#clientLogin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #010a13;
+  z-index: 998;
+  border-top: 2px solid #715c36;
+
+  #clientLogin_videoArea {
+    width: calc(100vw - 225px);
+    height: calc(100vh - 2px);
+    background-image: url("../../../img/containers/client_login/loginscreen_background.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    #clientLogin_videoArea_player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100vw - 225px);
+      height: calc(100vh - 2px);
+      z-index: 1;
+      object-fit: cover;
+    }
+
+    #clientLogin_videoArea_controls {
+      position: absolute;
+      left: 0;
+      bottom: 25px;
+      width: 500px;
+      height: 54px;
+      z-index: 1;
+
+      #clientLogin_videoArea_controls_riotLogo {
+        display: inline-block;
+        width: 100px;
+        height: 54px;
+        margin-left: 37px;
+        background-image: url("../../../img/brands/riotgames_logo.png");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      #clientLogin_videoArea_controls_separator {
+        display: inline-block;
+        width: 5px;
+        height: 54px;
+        margin-left: 15px;
+        background-image: url("../../../img/ui/vertical-line-separator.png");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      #clientLogin_videoArea_controls_videoSettings {
+        display: inline-block;
+        width: 270px;
+        height: 54px;
+        margin-left: 15px;
+        vertical-align: 14px;
+
+        #clientLogin_videoArea_controls_videoSettings_disableVideoContainer, #clientLogin_videoArea_controls_videoSettings_disableVideoSoundContainer {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  #clientLogin_authArea {
+    width: calc(224px - 34px);
+    height: calc(100vh - 2px);
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: #010a13;
+    border-left: 1px solid #1c282f;
+
+    #clientLogin_authArea_leagueLogo {
+      width: 100%;
+      height: 47px; //60 ou 65px ?
+      margin-top: 45px;
+      background-image: url("../../../img/brands/lol/lol_logo.png");
+      background-position: center center;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+    }
+
+    #clientLogin_authArea_title {
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 34px;
+      color: #e6eae0;
+      font-size: 16px;
+      font-family: 'Beaufort for LoL', serif;
+      font-weight: 700;
+      font-style: normal;
+      text-transform: uppercase;
+    }
+
+    #clientLogin_authArea_authForm_passwordContainer {
+      display: none; // to remove if login is using Riot SSO system
+      margin-top: 13px;
+    }
+
+    #clientLogin_authArea_authForm_rememberMeContainer {
+      margin-top: 18px;
+    }
+
+    #clientLogin_authArea_authForm_regionContainer {
+      margin-top: 36px;
+
+      .form_select_optionsContainer {
+        width: 188px;
+      }
+    }
+
+    #clientLogin_authArea_authForm_languageContainer {
+      display: none; // to remove if more than one language in the app
+      margin-top: 13px;
+
+      .form_select_optionsContainer {
+        width: 188px;
+      }
+    }
+
+    #clientLogin_signInButton {
+      margin-top: 36px;
+    }
+
+    #clientLogin_createAccountButton {
+      margin-top: 13px;
+    }
+
+    #clientLogin_forgotUsernameLink {
+      margin-top: 25px;
+    }
+
+    #clientLogin_version {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 224px;
+      height: 36px;
+      margin-top: 13px;
+      border-top: 1px solid #1c282f;
+      color: #1c282f;
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Beaufort for LOL', serif;
+      font-weight: 600;
+      line-height: 33px;
+      overflow: hidden;
+    }
+  }
+}
