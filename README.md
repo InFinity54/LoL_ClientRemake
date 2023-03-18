@@ -1,10 +1,11 @@
 # _League of Legends_ Client Remake
 
-Recréation (et partiellement fictive) la plus fidèle possible du client de League of Legends.
+Recréation (et partiellement fictive) la plus fidèle possible du client de League of Legends. Ce dépôt utilise des fichiers stockés avec _Git LFS_.
 
 ## Installation du projet
 
 * Installer [_Git_](https://git-scm.com)
+* Vérifier que _Git LFS_ est disponible.
 * Installer la dernière version LTS de [_Node.JS_](https://nodejs.org/fr)
 * Installer _Yarn_ à l'aide de la commande suivante : `npm install --global yarn`
 * Se placer dans le dossier où l'on souhaite enregistrer le code du programme
