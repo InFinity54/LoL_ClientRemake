@@ -4,10 +4,10 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: flex;
   background-color: #010a13;
   z-index: 998;
   border-top: 2px solid #715c36;
+  display: none;
 
   #clientLogin_videoArea {
     width: calc(100vw - 225px);

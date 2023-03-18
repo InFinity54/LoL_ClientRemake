@@ -1,4 +1,4 @@
-/*let interval = null;
+let interval = null;
 let loadingProgress = 0;
 
 jQuery(document).ready(() => {
@@ -21,4 +21,4 @@ function fakeLoading() {
     loadingProgress += 10;
     jQuery("#clientLoading_currentProgress").css("width", loadingProgress + "%");
   }
-}*/
+}

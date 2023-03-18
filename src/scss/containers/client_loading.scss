@@ -10,7 +10,6 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   z-index: 1000;
-  display: none;
 
   #clientLoading_ring {
     position: absolute;
@@ -52,6 +51,7 @@
     font-style: normal;
     font-size: 19px;
     text-align: center;
+    text-transform: uppercase;
     line-height: 100%;
     color: #c8aa6e;
   }
