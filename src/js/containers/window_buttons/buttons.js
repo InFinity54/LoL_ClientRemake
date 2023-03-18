@@ -1,5 +1,5 @@
 jQuery("#windowButton_help").on("click", (event) => {
-  // todo: open support link
+  window.appApi.openLink("https://support.riotgames.com/hc/fr");
 });
 
 jQuery("#windowButton_reduce").on("click", (event) => {
