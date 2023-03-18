@@ -34,6 +34,10 @@ const createWindow = () => {
 
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
+  mainWindow.on('restore', function (event) {
+    mainWindow.webContents.setAudioMuted(false);
+  })
+
   if (!isInProdMode) {
     mainWindow.webContents.openDevTools();
   }
@@ -96,6 +100,7 @@ const createWindow = () => {
 
   ipcMain.handle('windowReduce', (event) => {
     mainWindow.minimize();
+    mainWindow.webContents.setAudioMuted(true);
   });
 
   ipcMain.handle('windowClose', (event) => {

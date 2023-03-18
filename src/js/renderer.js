@@ -4,6 +4,7 @@ import '../scss/app.scss';
 // JS
 import "./app";
 import "./containers/client_loading/loading";
+import "./containers/window_buttons/buttons";
 import "./containers/client_login/video";
 import "./containers/client_login/login";
 
