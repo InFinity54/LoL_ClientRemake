@@ -1,0 +1,108 @@
+.form_select_group {
+  width: 100%;
+
+  label {
+    width: 100%;
+    color: #949f95;
+    font-size: 12px;
+    font-family: 'Spiegel', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .form_select {
+    position: relative;
+    display: block;
+    width: calc(100% - 14px);
+    padding: 7px 6px;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(180deg, #c4a461, #6d5925);
+    margin-top: 7px;
+    background: linear-gradient(180deg, #0f171d 0%, #0f171d 100%);
+    color: #949f95;
+    font-size: 12px;
+    font-family: 'Spiegel', serif;
+    font-weight: 600;
+    font-style: normal;
+    transition: background 0.25s, border 0.25s, color 0.25s;
+
+    &::before {
+      position: absolute;
+      top: 9px;
+      right: 6px;
+      width: 12px;
+      height: 12px;
+      content: '';
+      background-image: url('../../../../img/ui/form/select/up-down-arrow.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      transition: all 0.25s;
+    }
+
+    &:hover {
+      border-image-source: linear-gradient(180deg, #efe5d0, #c99d3f);
+      background: linear-gradient(180deg, #0f171d 0%, #2c2f2a 100%);
+    }
+
+    &.active {
+      border-image-source: linear-gradient(180deg, #463714, #463714);
+      background: linear-gradient(180deg, #0f171d 0%, #0f171d 100%);
+      color: #463714;
+
+      &::before {
+        background-image: url('../../../../img/ui/form/select/up-down-arrow-locked.png');
+      }
+    }
+
+    span {
+      pointer-events: none;
+    }
+  }
+
+  .form_select_optionsContainer {
+    display: none;
+    position: absolute;
+    max-height: 150px;
+    border: 1px solid #463714;
+    background: #010a13;
+    overflow-y: auto;
+    z-index: 998;
+
+    @import "../scrollbar";
+
+    .form_select_option {
+      width: calc(100% - 12px);
+      padding: 7px 6px;
+      background-color: #010a13;
+      border-bottom: 1px solid #1f2123;
+      color: #b2a681;
+      font-size: 12px;
+      font-family: 'Spiegel', serif;
+      font-weight: 600;
+      overflow: hidden;
+      transition: all 0.25s;
+
+      &:hover {
+        background-color: #1e2328;
+        color: #dad1c0;
+      }
+    }
+
+    .form_select_option.selected:before {
+      position: relative;
+      top: 2px;
+      float: right;
+      width: 12px;
+      height: 12px;
+      content: '';
+      background-image: url('../../../../img/ui/form/select/dropdown-check.png');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+  }
+}
