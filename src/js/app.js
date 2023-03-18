@@ -14,10 +14,6 @@ window.appApi.noSettingsFile((event) => {
 
 window.appApi.updateSettings((event, args) => {
   window.appSettings = JSON.parse(args);
-
-  if (!window.appSettings.soundEnabled) {
-    jQuery("#settings_audio_enablesound_input").removeAttr("checked");
-  }
 });
 
 window.updaterAPI.noUpdateAvailable((event) => {
@@ -35,7 +31,7 @@ window.updaterAPI.noUpdateAvailable((event) => {
 });
 
 window.updaterAPI.updateAvailable((event, args) => {
-  loadingProgressText.html("Chargement");
+  loadingProgressText.html("Mise à jour");
 });
 
 window.updaterAPI.updateDownloading((event, args) => {
