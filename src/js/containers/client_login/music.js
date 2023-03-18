@@ -3,7 +3,6 @@ const audioPlayer = new Audio(musicBackground);
 const audioSettings_disableSound = jQuery("#clientLogin_videoArea_controls_videoSettings_disableVideoSound");
 
 function startLoginScreenMusic() {
-  audioPlayer.currentTime = 0;
   audioPlayer.play();
 
   audioPlayer.addEventListener('ended', function() {
@@ -13,8 +12,7 @@ function startLoginScreenMusic() {
 
 function stopLoginScreenMusic() {
   audioPlayer.pause();
-  audioPlayer.currentTime = 0;
-  audioPlayer.ended = null;
+  audioPlayer.src = musicBackground;
 }
 
 audioSettings_disableSound.change(function() {
