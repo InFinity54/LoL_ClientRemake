@@ -12,10 +12,10 @@
 @import "ui/form/select";
 @import "ui/form/text";
 
+/* CSS des modales */
+@import "modals/settings_modal";
+
 /* CSS des conteneurs */
 @import "containers/client_loading";
 @import "containers/window_buttons";
 @import "containers/client_login";
-
-/* CSS des modales */
-@import "modals/settings_modal";
