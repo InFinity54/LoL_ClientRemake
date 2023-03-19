@@ -1,0 +1,110 @@
+<div id="settingsModal">
+    <div id="settingsModal_externalBorder"></div>
+    <div id="settingsModal_content">
+        <div id="settingsModal_header">
+            <div id="settingsModal_title">
+                <span id="settingsModal_secondaryTitle">Client /</span> <span id="settingsModal_primaryTitle">Général</span>
+            </div>
+            <div id="settingsModal_reinitArea">
+                <button class="defaultButton small" id="settingsModal_reinitButton">Réinitialiser</button>
+            </div>
+        </div>
+
+        <div id="settingsModal_settingsArea">
+            <div id="settingsModal_settingsArea_menu">
+                <div class="settingsModal_settingsMenuGroupName">Client</div>
+                <div class="settingsModal_settingsMenuItem active">Général</div>
+                <div class="settingsModal_settingsMenuItem">Messagerie & amis</div>
+                <div class="settingsModal_settingsMenuItem">Audio</div>
+                <div class="settingsModal_settingsMenuItem">Chat vocal</div>
+                <div class="settingsModal_settingsMenuItem">Liste des bloqués</div>
+
+                <div class="settingsModal_settingsMenuGroupName">En jeu</div>
+                <div class="settingsModal_settingsMenuItem">Raccourcis</div>
+                <div class="settingsModal_settingsMenuItem">Audio</div>
+                <div class="settingsModal_settingsMenuItem">Interface</div>
+                <div class="settingsModal_settingsMenuItem">Jeu</div>
+                <div class="settingsModal_settingsMenuItem">Rediffusions</div>
+
+                <div class="settingsModal_settingsMenuGroupName">A propos</div>
+                <div class="settingsModal_settingsMenuItem">Confidentialité</div>
+                <div class="settingsModal_settingsMenuItem">CGU</div>
+                <div class="settingsModal_settingsMenuItem">Licences tierces</div>
+                <div class="settingsModal_settingsMenuItem">Version</div>
+            </div>
+
+            <div id="settingsModal_settingsArea_elements">
+                <div id="settingsModal_client_generalSettingsArea">
+                    <div id="settingsModal_client_generalSettings_conductCode">
+                        <p>Code de conduite de League of Legends</p>
+                        <a href="#" id="settingsModal_client_generalSettings_conductCodeLink">Voir sur Internet <i class="external_link"></i></a>
+                    </div>
+
+                    <div class="form_checkbox_group" id="settingsModal_client_generalSettings_lowConfigModeContainer">
+                        <input type="checkbox" id="settingsModal_client_generalSettings_lowConfigMode" name="settingsModal_client_generalSettings_lowConfigMode" />
+                        <label for="settingsModal_client_generalSettings_lowConfigMode">Activer le mode config basse</label>
+                    </div>
+
+                    <div class="form_select_group" id="settingsModal_client_generalSettings_closeClientDuringGameContainer">
+                        <label>Fermer le client pendant la partie</label>
+
+                        <div class="form_select">
+                            <span class="form_select_selectedOption" id="settingsModal_client_generalSettings_closeClientDuringGame" data-value="off">Jamais</span>
+                        </div>
+
+                        <div class="form_select_optionsContainer">
+                            <div class="form_select_option" data-value="on">Toujours</div>
+                            <div class="form_select_option" data-value="auto">Si nécessaire</div>
+                            <div class="form_select_option selected" data-value="off">Jamais</div>
+                        </div>
+                    </div>
+
+                    <div id="settingsModal_client_generalSettings_phoneNumberCheck">
+                        <p>Vérification du compte</p>
+                        <div id="settingsModal_client_generalSettings_phoneNumberCheck_currentState">
+                            <div id="settingsModal_client_generalSettings_phoneNumberCheck_phone"></div>
+                            <div id="settingsModal_client_generalSettings_phoneNumberCheck_checkmark"></div>
+                            <div id="settingsModal_client_generalSettings_phoneNumberCheck_state">Vérifié</div>
+                        </div>
+                        <button class="defaultButton small" id="settingsModal_client_generalSettings_phoneNumberCheck_removePhoneNumber">Supprimer le numéro</button>
+                    </div>
+
+                    <div class="form_checkbox_group" id="settingsModal_client_generalSettings_autoCrashReportContainer">
+                        <input type="checkbox" id="settingsModal_client_generalSettings_autoCrashReport" name="settingsModal_client_generalSettings_autoCrashReport" />
+                        <label for="settingsModal_client_generalSettings_autoCrashReport">Envoi automatique des rapports de plantage</label>
+                    </div>
+
+                    <div class="form_select_group" id="settingsModal_client_generalSettings_windowSizeContainer">
+                        <label>Taille de la fenêtre</label>
+
+                        <div class="form_select">
+                            <span class="form_select_selectedOption" id="settingsModal_client_generalSettings_windowSize" data-value="1280x720">1280x720</span>
+                        </div>
+
+                        <div class="form_select_optionsContainer">
+                            <!--<div class="form_select_option" data-value="1024x586">1024x586</div>-->
+                            <div class="form_select_option selected" data-value="1280x720">1280x720</div>
+                            <!--<div class="form_select_option" data-value="1600x900">1600x900</div>-->
+                        </div>
+                    </div>
+
+                    <div class="form_select_group" id="settingsModal_client_generalSettings_newsLanguageContainer">
+                        <label>Langue des actualités</label>
+
+                        <div class="form_select">
+                            <span class="form_select_selectedOption" id="settingsModal_client_generalSettings_newsLanguage" data-value="1280x720">1280x720</span>
+                        </div>
+
+                        <div class="form_select_optionsContainer">
+                            <div class="form_select_option selected" data-value="fr">Français</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="settingsModal_closeButtonArea">
+            <button class="defaultButton" id="settingsModal_closeButton">Terminé</button>
+        </div>
+    </div>
+</div>

@@ -1,11 +1,11 @@
 button.defaultButton {
-  display: block;
+  display: inline-block;
   width: 100%;
-  padding: 7px 6px;
+  height: 32px;
+  padding: 5px 6px;
   border: 2px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(180deg, #c2a883, #726038);
-  margin-top: 7px;
   background: linear-gradient(180deg, #1d2529 0%, #1d2529 100%);
   color: #d2bf98;
   font-size: 15px;
@@ -15,6 +15,14 @@ button.defaultButton {
   text-align: center;
   text-transform: uppercase;
   transition: all 0.25s;
+
+  &.small {
+    font-size: 12px;
+    font-family: 'Spiegel', serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+  }
 
   i {
     width: 9px;

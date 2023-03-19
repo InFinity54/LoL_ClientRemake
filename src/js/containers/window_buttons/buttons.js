@@ -7,7 +7,7 @@ jQuery("#windowButton_reduce").on("click", (event) => {
 });
 
 jQuery("#windowButton_settings").on("click", (event) => {
-  // todo: settings window
+  jQuery("#settingsModal").fadeIn(500);
 });
 
 jQuery("#windowButton_exit").on("click", (event) => {
