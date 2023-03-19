@@ -11,5 +11,5 @@ jQuery("#windowButton_settings").on("click", (event) => {
 });
 
 jQuery("#windowButton_exit").on("click", (event) => {
-  // todo: app close confirm modal
+  window.windowAPI.appExit();
 });
