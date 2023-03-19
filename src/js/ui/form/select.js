@@ -23,4 +23,5 @@ jQuery(".form_select_option").click((event) => {
   formSelectOptions.find('div.form_select_option').removeClass("selected");
   formSelect.removeClass("active");
   selectedOption.addClass("selected");
+  selectedOptionDisplay.trigger("change");
 });
