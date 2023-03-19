@@ -13,7 +13,8 @@
         <div id="settingsModal_settingsArea">
             <div id="settingsModal_settingsArea_menu">
                 <div class="settingsModal_settingsMenuGroupName">Client</div>
-                <div class="settingsModal_settingsMenuItem active">Général</div>
+                <div class="settingsModal_settingsMenuItem active" data-tab="settingsModal_client_generalSettingsArea">Général</div>
+                <div class="settingsModal_settingsMenuItem" data-tab="settingsModal_client_notificationsSettingsArea">Notifications</div>
                 <div class="settingsModal_settingsMenuItem">Messagerie & amis</div>
                 <div class="settingsModal_settingsMenuItem">Audio</div>
                 <div class="settingsModal_settingsMenuItem">Chat vocal</div>
@@ -34,18 +35,18 @@
             </div>
 
             <div id="settingsModal_settingsArea_elements">
-                <div id="settingsModal_client_generalSettingsArea">
-                    <div id="settingsModal_client_generalSettings_conductCode">
+                <div id="settingsModal_client_generalSettingsArea" class="settingsModal_settingsArea_elementsList">
+                    <div id="settingsModal_client_generalSettings_conductCode" class="settingsModal_settingsArea_element">
                         <p>Code de conduite de League of Legends</p>
                         <a href="#" id="settingsModal_client_generalSettings_conductCodeLink">Voir sur Internet <i class="external_link"></i></a>
                     </div>
 
-                    <div class="form_checkbox_group" id="settingsModal_client_generalSettings_lowConfigModeContainer">
+                    <div class="form_checkbox_group settingsModal_settingsArea_element" id="settingsModal_client_generalSettings_lowConfigModeContainer">
                         <input type="checkbox" id="settingsModal_client_generalSettings_lowConfigMode" name="settingsModal_client_generalSettings_lowConfigMode" />
                         <label for="settingsModal_client_generalSettings_lowConfigMode">Activer le mode config basse</label>
                     </div>
 
-                    <div class="form_select_group" id="settingsModal_client_generalSettings_closeClientDuringGameContainer">
+                    <div class="form_select_group settingsModal_settingsArea_element" id="settingsModal_client_generalSettings_closeClientDuringGameContainer">
                         <label>Fermer le client pendant la partie</label>
 
                         <div class="form_select">
@@ -59,7 +60,7 @@
                         </div>
                     </div>
 
-                    <div id="settingsModal_client_generalSettings_phoneNumberCheck">
+                    <div id="settingsModal_client_generalSettings_phoneNumberCheck" class="settingsModal_settingsArea_element">
                         <p>Vérification du compte</p>
                         <div id="settingsModal_client_generalSettings_phoneNumberCheck_currentState">
                             <div id="settingsModal_client_generalSettings_phoneNumberCheck_phone"></div>
@@ -69,12 +70,12 @@
                         <button class="defaultButton small" id="settingsModal_client_generalSettings_phoneNumberCheck_removePhoneNumber">Supprimer le numéro</button>
                     </div>
 
-                    <div class="form_checkbox_group" id="settingsModal_client_generalSettings_autoCrashReportContainer">
+                    <div class="form_checkbox_group settingsModal_settingsArea_element" id="settingsModal_client_generalSettings_autoCrashReportContainer">
                         <input type="checkbox" id="settingsModal_client_generalSettings_autoCrashReport" name="settingsModal_client_generalSettings_autoCrashReport" />
                         <label for="settingsModal_client_generalSettings_autoCrashReport">Envoi automatique des rapports de plantage</label>
                     </div>
 
-                    <div class="form_select_group" id="settingsModal_client_generalSettings_windowSizeContainer">
+                    <div class="form_select_group settingsModal_settingsArea_element" id="settingsModal_client_generalSettings_windowSizeContainer">
                         <label>Taille de la fenêtre</label>
 
                         <div class="form_select">
@@ -88,7 +89,7 @@
                         </div>
                     </div>
 
-                    <div class="form_select_group" id="settingsModal_client_generalSettings_newsLanguageContainer">
+                    <div class="form_select_group settingsModal_settingsArea_element" id="settingsModal_client_generalSettings_newsLanguageContainer">
                         <label>Langue des actualités</label>
 
                         <div class="form_select">
@@ -98,6 +99,23 @@
                         <div class="form_select_optionsContainer">
                             <div class="form_select_option selected" data-value="fr">Français</div>
                         </div>
+                    </div>
+                </div>
+
+                <div id="settingsModal_client_notificationsSettingsArea" class="settingsModal_settingsArea_elementsList">
+                    <div class="form_checkbox_group settingsModal_settingsArea_element" id="settingsModal_client_notificationsSettings_disableEsportNotificationContainer">
+                        <input type="checkbox" id="settingsModal_client_notificationsSettings_disableEsportNotification" name="settingsModal_client_notificationsSettings_disableEsportNotification" />
+                        <label for="settingsModal_client_notificationsSettings_disableEsportNotification">Désactiver les notifications e-sport</label>
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element" id="settingsModal_client_notificationsSettings_onlyFriendsInvitesContainer">
+                        <input type="checkbox" id="settingsModal_client_notificationsSettings_onlyFriendsInvites" name="settingsModal_client_notificationsSettings_onlyFriendsInvites" />
+                        <label for="settingsModal_client_notificationsSettings_onlyFriendsInvites">Autoriser les invitations des amis uniquement</label>
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element" id="settingsModal_client_notificationsSettings_disableNewIconInCollectionContainer">
+                        <input type="checkbox" id="settingsModal_client_notificationsSettings_disableNewIconInCollection" name="settingsModal_client_notificationsSettings_disableNewIconInCollection" />
+                        <label for="settingsModal_client_notificationsSettings_disableNewIconInCollection">Désactiver les marqueurs de nouveauté dans Collection</label>
                     </div>
                 </div>
             </div>

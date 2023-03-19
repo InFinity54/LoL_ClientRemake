@@ -11,9 +11,14 @@ window.appSettings = {
   global: {
     lowConfigMode: false,
     closeClientDuringGame: "off",
-    autoCrashReport: false,
+    autoCrashReport: true,
     windowSize: "1280x720",
     newsLanguage: "fr"
+  },
+  notifications: {
+    disableEsportNotification: false,
+    onlyFriendsInvites: false,
+    disableNewIconInCollection: false
   }
 };
 
@@ -65,6 +70,7 @@ window.updaterAPI.updateDownloaded((event) => {
 });
 
 function initializeUserSettings() {
+  /* LOGIN SCREEN SETTINGS */
   if (window.appSettings.loginScreen.videoEnabled) {
     startLoginScreenVideo();
   } else {
@@ -77,6 +83,8 @@ function initializeUserSettings() {
     jQuery("#clientLogin_videoArea_controls_videoSettings_disableVideoSound").attr("checked", "checked");
   }
 
+  /* CLIENT SETTINGS */
+  // Global tab
   if (window.appSettings.global.lowConfigMode) {
     jQuery("#settingsModal_client_generalSettings_lowConfigMode").attr("checked", "checked");
   }
@@ -89,4 +97,17 @@ function initializeUserSettings() {
 
   jQuery("#settingsModal_client_generalSettings_windowSizeContainer .form_select_option[data-value='" + window.appSettings.global.windowSize + "']").click();
   jQuery("#settingsModal_client_generalSettings_newsLanguageContainer .form_select_option[data-value='" + window.appSettings.global.newsLanguage + "']").click();
+
+  // Notifications tab
+  if (window.appSettings.notifications.disableEsportNotification) {
+    jQuery("#settingsModal_client_notificationsSettings_disableEsportNotification").attr("checked", "checked");
+  }
+
+  if (window.appSettings.notifications.onlyFriendsInvites) {
+    jQuery("#settingsModal_client_notificationsSettings_onlyFriendsInvites").attr("checked", "checked");
+  }
+
+  if (window.appSettings.notifications.disableNewIconInCollection) {
+    jQuery("#settingsModal_client_notificationsSettings_disableNewIconInCollection").attr("checked", "checked");
+  }
 }

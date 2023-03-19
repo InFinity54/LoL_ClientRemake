@@ -87,6 +87,7 @@
       #settingsModal_settingsArea_menu {
         width: 159px;
         margin-right: 25px;
+        overflow-x: hidden;
         overflow-y: scroll;
 
         @import "../ui/scrollbar";
@@ -143,7 +144,11 @@
 
         @import "../ui/scrollbar";
 
-        #settingsModal_client_generalSettings_conductCode, #settingsModal_client_generalSettings_lowConfigModeContainer, #settingsModal_client_generalSettings_closeClientDuringGameContainer, #settingsModal_client_generalSettings_phoneNumberCheck, #settingsModal_client_generalSettings_autoCrashReportContainer, #settingsModal_client_generalSettings_windowSizeContainer {
+        .settingsModal_settingsArea_elementsList:not(#settingsModal_client_generalSettingsArea) {
+          display: none;
+        }
+
+        .settingsModal_settingsArea_element {
           margin-bottom: 20px;
         }
 
