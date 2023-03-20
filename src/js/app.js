@@ -19,6 +19,12 @@ window.appSettings = {
     disableEsportNotification: false,
     onlyFriendsInvites: false,
     disableNewIconInCollection: false
+  },
+  messages: {
+    enableLanguageFilter: true,
+    enableClickLinkAdvert: true,
+    enableMoreUnreadBar: true,
+    displayMessagesFromFriendInvites: false
   }
 };
 
@@ -109,5 +115,22 @@ function initializeUserSettings() {
 
   if (window.appSettings.notifications.disableNewIconInCollection) {
     jQuery("#settingsModal_client_notificationsSettings_disableNewIconInCollection").attr("checked", "checked");
+  }
+
+  // Messages tab
+  if (window.appSettings.messages.enableLanguageFilter) {
+    jQuery("#settingsModal_client_notificationsSettings_enableLanguageFilter").attr("checked", "checked");
+  }
+
+  if (window.appSettings.messages.enableClickLinkAdvert) {
+    jQuery("#settingsModal_client_notificationsSettings_enableClickLinkAdvert").attr("checked", "checked");
+  }
+
+  if (window.appSettings.messages.enableMoreUnreadBar) {
+    jQuery("#settingsModal_client_notificationsSettings_enableMoreUnreadBar").attr("checked", "checked");
+  }
+
+  if (window.appSettings.messages.displayMessagesFromFriendInvites) {
+    jQuery("#settingsModal_client_notificationsSettings_displayMessagesFromFriendInvites").attr("checked", "checked");
   }
 }
