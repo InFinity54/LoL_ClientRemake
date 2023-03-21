@@ -15,6 +15,8 @@ jQuery(".settingsModal_settingsMenuItem").on("click", (event) => {
   jQuery(event.target).addClass("active");
   jQuery(".settingsModal_settingsArea_elementsList").hide();
   jQuery("#" + event.target.attributes["data-tab"].value).show();
+  jQuery("#settingsModal_secondaryTitle").html(event.target.attributes["data-area"].value + " /");
+  jQuery("#settingsModal_primaryTitle").html(jQuery(event.target).html());
 });
 
 function resetDefaultSettings() {
