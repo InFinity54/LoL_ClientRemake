@@ -6,6 +6,7 @@ function startLoginScreenMusic() {
   audioPlayer.play();
 
   audioPlayer.addEventListener('ended', function() {
+    audioPlayer.src = musicBackground;
     startLoginScreenMusic();
   });
 }
