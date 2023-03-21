@@ -7,7 +7,7 @@ jQuery("#windowButton_reduce").on("click", (event) => {
 });
 
 jQuery("#windowButton_settings").on("click", (event) => {
-  jQuery("#settingsModal").fadeIn(500);
+  jQuery("#settingsModal").fadeIn(250);
 });
 
 jQuery("#windowButton_exit").on("click", (event) => {

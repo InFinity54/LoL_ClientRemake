@@ -1,5 +1,6 @@
 import { startLoginScreenVideo } from "./containers/client_login/video";
 import { startLoginScreenMusic } from "./containers/client_login/music";
+import { initSettingsDisplay } from "./modals/settings_modal/settings";
 const loadingProgressBar = jQuery("#clientLoading_currentProgress");
 const loadingProgressText = jQuery("#clientLoading_progressText");
 
@@ -40,7 +41,8 @@ window.updaterAPI.noUpdateAvailable((event) => {
   loadingProgressBar.css("width", "100%");
 
   setTimeout(() => {
-    initializeUserSettings();
+    initializeLoginScreenSettings();
+    initSettingsDisplay();
     jQuery("#clientLoading").fadeOut(500);
     jQuery("#clientLogin").css("display", "flex").hide().fadeIn(500);
   }, 500);
@@ -75,8 +77,7 @@ window.updaterAPI.updateDownloaded((event) => {
   }, 3000);
 });
 
-function initializeUserSettings() {
-  /* LOGIN SCREEN SETTINGS */
+function initializeLoginScreenSettings() {
   if (window.appSettings.loginScreen.videoEnabled) {
     startLoginScreenVideo();
   } else {
@@ -87,50 +88,5 @@ function initializeUserSettings() {
     startLoginScreenMusic();
   } else {
     jQuery("#clientLogin_videoArea_controls_videoSettings_disableVideoSound").attr("checked", "checked");
-  }
-
-  /* CLIENT SETTINGS */
-  // Global tab
-  if (window.appSettings.global.lowConfigMode) {
-    jQuery("#settingsModal_client_generalSettings_lowConfigMode").attr("checked", "checked");
-  }
-
-  jQuery("#settingsModal_client_generalSettings_closeClientDuringGameContainer .form_select_option[data-value='" + window.appSettings.global.closeClientDuringGame + "']").click();
-
-  if (window.appSettings.global.autoCrashReport) {
-    jQuery("#settingsModal_client_generalSettings_autoCrashReport").attr("checked", "checked");
-  }
-
-  jQuery("#settingsModal_client_generalSettings_windowSizeContainer .form_select_option[data-value='" + window.appSettings.global.windowSize + "']").click();
-  jQuery("#settingsModal_client_generalSettings_newsLanguageContainer .form_select_option[data-value='" + window.appSettings.global.newsLanguage + "']").click();
-
-  // Notifications tab
-  if (window.appSettings.notifications.disableEsportNotification) {
-    jQuery("#settingsModal_client_notificationsSettings_disableEsportNotification").attr("checked", "checked");
-  }
-
-  if (window.appSettings.notifications.onlyFriendsInvites) {
-    jQuery("#settingsModal_client_notificationsSettings_onlyFriendsInvites").attr("checked", "checked");
-  }
-
-  if (window.appSettings.notifications.disableNewIconInCollection) {
-    jQuery("#settingsModal_client_notificationsSettings_disableNewIconInCollection").attr("checked", "checked");
-  }
-
-  // Messages tab
-  if (window.appSettings.messages.enableLanguageFilter) {
-    jQuery("#settingsModal_client_notificationsSettings_enableLanguageFilter").attr("checked", "checked");
-  }
-
-  if (window.appSettings.messages.enableClickLinkAdvert) {
-    jQuery("#settingsModal_client_notificationsSettings_enableClickLinkAdvert").attr("checked", "checked");
-  }
-
-  if (window.appSettings.messages.enableMoreUnreadBar) {
-    jQuery("#settingsModal_client_notificationsSettings_enableMoreUnreadBar").attr("checked", "checked");
-  }
-
-  if (window.appSettings.messages.displayMessagesFromFriendInvites) {
-    jQuery("#settingsModal_client_notificationsSettings_displayMessagesFromFriendInvites").attr("checked", "checked");
   }
 }

@@ -1,23 +1,33 @@
-jQuery("#settingsModal_client_notificationsSettings_enableLanguageFilter").on("change", (event) => {
-  console.log("enableLanguageFilter: " + jQuery(event.target).is(":checked"));
+const enableLanguageFilterCheckbox = jQuery("#settingsModal_client_notificationsSettings_enableLanguageFilter");
+const enableClickLinkAdvertCheckbox = jQuery("#settingsModal_client_notificationsSettings_enableClickLinkAdvert");
+const enableMoreUnreadBarCheckbox = jQuery("#settingsModal_client_notificationsSettings_enableMoreUnreadBar");
+const displayMessagesFromFriendInvitesCheckbox = jQuery("#settingsModal_client_notificationsSettings_displayMessagesFromFriendInvites");
+
+enableLanguageFilterCheckbox.on("change", (event) => {
   window.appSettings.messages.enableLanguageFilter = jQuery(event.target).is(":checked");
   window.appApi.saveSettings(JSON.stringify(window.appSettings));
 });
 
-jQuery("#settingsModal_client_notificationsSettings_enableClickLinkAdvert").on("change", (event) => {
-  console.log("enableClickLinkAdvert: " + jQuery(event.target).is(":checked"));
+enableClickLinkAdvertCheckbox.on("change", (event) => {
   window.appSettings.messages.enableClickLinkAdvert = jQuery(event.target).is(":checked");
   window.appApi.saveSettings(JSON.stringify(window.appSettings));
 });
 
-jQuery("#settingsModal_client_notificationsSettings_enableMoreUnreadBar").on("change", (event) => {
-  console.log("enableMoreUnreadBar: " + jQuery(event.target).is(":checked"));
+enableMoreUnreadBarCheckbox.on("change", (event) => {
   window.appSettings.messages.enableMoreUnreadBar = jQuery(event.target).is(":checked");
   window.appApi.saveSettings(JSON.stringify(window.appSettings));
 });
 
-jQuery("#settingsModal_client_notificationsSettings_displayMessagesFromFriendInvites").on("change", (event) => {
-  console.log("displayMessagesFromFriendInvites: " + jQuery(event.target).is(":checked"));
+displayMessagesFromFriendInvitesCheckbox.on("change", (event) => {
   window.appSettings.messages.displayMessagesFromFriendInvites = jQuery(event.target).is(":checked");
   window.appApi.saveSettings(JSON.stringify(window.appSettings));
 });
+
+function initMessagesSettingsDisplay() {
+  enableLanguageFilterCheckbox.prop("checked", window.appSettings.messages.enableLanguageFilter);
+  enableClickLinkAdvertCheckbox.prop("checked", window.appSettings.messages.enableClickLinkAdvert);
+  enableMoreUnreadBarCheckbox.prop("checked", window.appSettings.messages.enableMoreUnreadBar);
+  displayMessagesFromFriendInvitesCheckbox.prop("checked", window.appSettings.messages.displayMessagesFromFriendInvites);
+}
+
+export { initMessagesSettingsDisplay }
