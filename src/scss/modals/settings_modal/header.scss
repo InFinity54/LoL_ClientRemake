@@ -1,0 +1,40 @@
+#settingsModal_header {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: calc(100% - 20px);
+  height: 66px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 1px solid #1c282f;
+
+  #settingsModal_title, #settingsModal_reinitArea {
+    width: 50%;
+    height: 32px;
+  }
+
+  #settingsModal_title {
+    font-family: 'Beaufort for LoL', serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 32px;
+    text-transform: uppercase;
+
+    #settingsModal_secondaryTitle {
+      color: #a09b8c;
+    }
+
+    #settingsModal_primaryTitle {
+      color: #f0e6d2;
+    }
+  }
+
+  #settingsModal_reinitArea {
+    text-align: right;
+
+    button {
+      width: 170px;
+    }
+  }
+}

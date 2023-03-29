@@ -1,6 +1,7 @@
 import { initGlobalSettingsDisplay } from "./settings_client_global";
 import { initNotificationsSettingsDisplay } from "./settings_client_notifications";
 import { initMessagesSettingsDisplay } from "./settings_client_messages";
+import { initAudioSettingsDisplay } from "./settings_client_audio";
 
 jQuery("#settingsModal_closeButton").on("click", (event) => {
   jQuery("#settingsModal").fadeOut(250);
@@ -41,6 +42,20 @@ function resetDefaultSettings() {
     displayMessagesFromFriendInvites: false
   };
 
+  window.appSettings.audio = {
+    enableAudio: true,
+    audioGlobalVolume: 100,
+    enableSfx: true,
+    sfxVolume: 100,
+    enableAmbientSounds: true,
+    enableChampSelectionSounds: true,
+    enableBanSounds: true,
+    enableMusic: true,
+    musicVolume: 100,
+    enableChampSelectMusic: true,
+    enableLobbyMusic: true
+  };
+
   initSettingsDisplay();
   window.appApi.saveSettings(JSON.stringify(window.appSettings));
 }
@@ -49,6 +64,7 @@ function initSettingsDisplay() {
   initGlobalSettingsDisplay();
   initNotificationsSettingsDisplay();
   initMessagesSettingsDisplay();
+  initAudioSettingsDisplay();
 }
 
 export { initSettingsDisplay }

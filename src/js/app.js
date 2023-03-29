@@ -26,6 +26,19 @@ window.appSettings = {
     enableClickLinkAdvert: true,
     enableMoreUnreadBar: true,
     displayMessagesFromFriendInvites: false
+  },
+  audio: {
+    enableAudio: true,
+    audioGlobalVolume: 100,
+    enableSfx: true,
+    sfxVolume: 100,
+    enableAmbientSounds: true,
+    enableChampSelectionSounds: true,
+    enableBanSounds: true,
+    enableMusic: true,
+    musicVolume: 100,
+    enableChampSelectMusic: true,
+    enableLobbyMusic: true
   }
 };
 

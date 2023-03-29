@@ -142,7 +142,60 @@
                 </div>
 
                 <div id="settingsModal_client_audioSettingsArea" class="settingsModal_settingsArea_elementsList">
-                    <!-- todo -->
+                    <div class="form_checkbox_group settingsModal_settingsArea_element" id="settingsModal_client_audioSettings_enableAudioContainer">
+                        <input type="checkbox" id="settingsModal_client_audioSettings_enableAudio" name="settingsModal_client_audioSettings_enableAudio" />
+                        <label for="settingsModal_client_audioSettings_enableAudio">Activer le son</label>
+                    </div>
+
+                    <div class="form_range_group settingsModal_settingsArea_element" id="settingsModal_client_audioSettings_audioGlobalVolumeContainer">
+                        <label for="settingsModal_client_audioSettings_audioGlobalVolume">Volume général : <span id="settingsModal_client_audioSettings_audioGlobalVolumeValue">100</span></label>
+                        <input type="range" value="100" min="0" max="100" id="settingsModal_client_audioSettings_audioGlobalVolume" name="settingsModal_client_audioSettings_audioGlobalVolume" />
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element settingsModal_settingsArea_subElement_level1" id="settingsModal_client_audioSettings_enableSfxContainer">
+                        <input type="checkbox" id="settingsModal_client_audioSettings_enableSfx" name="settingsModal_client_audioSettings_enableSfx" />
+                        <label for="settingsModal_client_audioSettings_enableSfx">Activer les effets sonores</label>
+                    </div>
+
+                    <div class="form_range_group settingsModal_settingsArea_element settingsModal_settingsArea_subElement_level1" id="settingsModal_client_audioSettings_sfxVolumeContainer">
+                        <label for="settingsModal_client_audioSettings_sfxVolume">Volume des effets : <span id="settingsModal_client_audioSettings_sfxVolumeValue">100</span></label>
+                        <input type="range" value="100" min="0" max="100" id="settingsModal_client_audioSettings_sfxVolume" name="settingsModal_client_audioSettings_sfxVolume" />
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element settingsModal_settingsArea_subElement_level2" id="settingsModal_client_audioSettings_enableAmbientSoundsContainer">
+                        <input type="checkbox" id="settingsModal_client_audioSettings_enableAmbientSounds" name="settingsModal_client_audioSettings_enableAmbientSounds" />
+                        <label for="settingsModal_client_audioSettings_enableAmbientSounds">Jouer les sons d'ambiance</label>
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element settingsModal_settingsArea_subElement_level2" id="settingsModal_client_audioSettings_enableChampSelectionSoundsContainer">
+                        <input type="checkbox" id="settingsModal_client_audioSettings_enableChampSelectionSounds" name="settingsModal_client_audioSettings_enableChampSelectionSounds" />
+                        <label for="settingsModal_client_audioSettings_enableChampSelectionSounds">Jouer les tirades de sélection</label>
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element settingsModal_settingsArea_subElement_level2" id="settingsModal_client_audioSettings_enableBanSoundsContainer">
+                        <input type="checkbox" id="settingsModal_client_audioSettings_enableBanSounds" name="settingsModal_client_audioSettings_enableBanSounds" />
+                        <label for="settingsModal_client_audioSettings_enableBanSounds">Jouer les tirades de bannissement</label>
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element settingsModal_settingsArea_subElement_level1" id="settingsModal_client_audioSettings_enableMusicContainer">
+                        <input type="checkbox" id="settingsModal_client_audioSettings_enableMusic" name="settingsModal_client_audioSettings_enableMusic" />
+                        <label for="settingsModal_client_audioSettings_enableMusic">Activer la musique</label>
+                    </div>
+
+                    <div class="form_range_group settingsModal_settingsArea_element settingsModal_settingsArea_subElement_level1" id="settingsModal_client_audioSettings_musicVolumeContainer">
+                        <label for="settingsModal_client_audioSettings_musicVolume">Volume de la musique : <span id="settingsModal_client_audioSettings_musicVolumeValue">100</span></label>
+                        <input type="range" value="100" min="0" max="100" id="settingsModal_client_audioSettings_musicVolume" name="settingsModal_client_audioSettings_musicVolume" />
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element settingsModal_settingsArea_subElement_level2" id="settingsModal_client_audioSettings_enableChampSelectMusicContainer">
+                        <input type="checkbox" id="settingsModal_client_audioSettings_enableChampSelectMusic" name="settingsModal_client_audioSettings_enableChampSelectMusic" />
+                        <label for="settingsModal_client_audioSettings_enableChampSelectMusic">Jouer la musique de sélection des champions</label>
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element settingsModal_settingsArea_subElement_level2" id="settingsModal_client_audioSettings_enableLobbyMusicContainer">
+                        <input type="checkbox" id="settingsModal_client_audioSettings_enableLobbyMusic" name="settingsModal_client_audioSettings_enableLobbyMusic" />
+                        <label for="settingsModal_client_audioSettings_enableLobbyMusic">Jouer la musique du salon/de fin de partie</label>
+                    </div>
                 </div>
 
                 <div id="settingsModal_client_vocalChatSettingsArea" class="settingsModal_settingsArea_elementsList">

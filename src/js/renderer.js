@@ -18,3 +18,4 @@ import "./containers/client_login/login";
 
 // JS for UI
 import "./ui/form/select";
+import "./ui/form/range";
