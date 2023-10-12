@@ -24,7 +24,7 @@
     "@electron-forge/plugin-webpack": "^6.0.4",
     "@vercel/webpack-asset-relocator-loader": "1.7.3",
     "css-loader": "^6.0.0",
-    "electron": "25.4.0",
+    "electron": "25.8.4",
     "electron-builder": "^24.6.3",
     "file-loader": "^6.2.0",
     "node-loader": "^2.0.0",
