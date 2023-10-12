@@ -199,7 +199,34 @@
                 </div>
 
                 <div id="settingsModal_client_vocalChatSettingsArea" class="settingsModal_settingsArea_elementsList">
-                    <!-- todo -->
+                    <h3>Quand je rejoins un groupe</h3>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element" id="settingsModal_client_vocalChatSettings_autoJoinLeagueVoiceContainer">
+                        <input type="checkbox" id="settingsModal_client_vocalChatSettings_autoJoinLeagueVoice" name="settingsModal_client_vocalChatSettings_autoJoinLeagueVoice" />
+                        <label for="settingsModal_client_vocalChatSettings_autoJoinLeagueVoice">Rejoindre le chat vocal automatiquement</label>
+                    </div>
+
+                    <div class="form_checkbox_group settingsModal_settingsArea_element" id="settingsModal_client_vocalChatSettings_disableMicWhenAutoJoinContainer">
+                        <input type="checkbox" id="settingsModal_client_vocalChatSettings_disableMicWhenAutoJoin" name="settingsModal_client_vocalChatSettings_disableMicWhenAutoJoin" />
+                        <label for="settingsModal_client_vocalChatSettings_disableMicWhenAutoJoin">Couper mon micro quand je me connecte à League Voice</label>
+                    </div>
+
+                    <h3>Paramètres d'entrée</h3>
+
+                    <div class="form_select_group settingsModal_settingsArea_element" id="settingsModal_client_vocalChatSettings_listeningDeviceContainer">
+                        <label>Périphérique d'entrée</label>
+
+                        <div class="form_select">
+                            <span class="form_select_selectedOption" id="settingsModal_client_generalSettings_listeningDevice" data-value="default">Périphérique par défaut</span>
+                        </div>
+
+                        <div class="form_select_optionsContainer"></div>
+                    </div>
+
+                    <div class="form_range_group settingsModal_settingsArea_element" id="settingsModal_client_vocalChatSettings_inputVolumeContainer">
+                        <label for="settingsModal_client_vocalChatSettings_inputVolume">Volume d'entrée (gain) : <span id="settingsModal_client_vocalChatSettings_inputVolumeValue">50</span>%</label>
+                        <input type="range" value="50" min="0" max="100" id="settingsModal_client_vocalChatSettings_inputVolume" name="settingsModal_client_vocalChatSettings_inputVolume" />
+                    </div>
                 </div>
 
                 <div id="settingsModal_client_blockedUsersSettingsArea" class="settingsModal_settingsArea_elementsList">
