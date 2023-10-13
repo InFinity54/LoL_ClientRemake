@@ -2,6 +2,10 @@
 
 Recréation (et partiellement fictive) la plus fidèle possible du client de League of Legends. Ce dépôt utilise des fichiers stockés avec _Git LFS_.
 
+Il est important de noter que ce client **ne peut pas** être utilisé en remplacement du client officiel, pour diverses raisons :
+* Les clients alternatifs ne sont pas supportés par Riot Games, et peut résulter en un bannissement de votre compte en cas d'utilisation.
+* En admettant que ce type de client soit officiellement supporté, cette version n'est que facultative. Les données sont récupérées via les outils de développement de Riot, ce qui explique l'absence de certains informations et/ou fonctionnalités dans ce programme (chat vocal, messagerie, liste d'amis, etc...).
+
 ## Installation du projet
 
 * Installer [_Git_](https://git-scm.com)
