@@ -8,7 +8,6 @@ import "./app";
 import "./modals/settings_modal/settings";
 import "./modals/settings_modal/settings_client_global";
 import "./modals/settings_modal/settings_client_notifications";
-import "./modals/settings_modal/settings_client_messages";
 
 // JS des conteneurs
 import "./containers/client_loading/loading";

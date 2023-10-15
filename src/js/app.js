@@ -1,7 +1,6 @@
 import { startLoginScreenVideo } from "./containers/client_login/video";
 import { startLoginScreenMusic } from "./containers/client_login/music";
 import { initSettingsDisplay } from "./modals/settings_modal/settings";
-import { populateListeningDevicesList } from "./modals/settings_modal/settings_client_vocalchat";
 const loadingProgressBar = jQuery("#clientLoading_currentProgress");
 const loadingProgressText = jQuery("#clientLoading_progressText");
 
@@ -11,22 +10,12 @@ window.appSettings = {
     soundEnabled: true
   },
   global: {
-    lowConfigMode: false,
-    closeClientDuringGame: "off",
     autoCrashReport: true,
     windowSize: "1280x720",
     newsLanguage: "fr"
   },
   notifications: {
     disableEsportNotification: false,
-    onlyFriendsInvites: false,
-    disableNewIconInCollection: false
-  },
-  messages: {
-    enableLanguageFilter: true,
-    enableClickLinkAdvert: true,
-    enableMoreUnreadBar: true,
-    displayMessagesFromFriendInvites: false
   },
   audio: {
     enableAudio: true,
@@ -40,18 +29,7 @@ window.appSettings = {
     musicVolume: 100,
     enableChampSelectMusic: true,
     enableLobbyMusic: true
-  },
-  leagueVoice: {
-    groupJoin: {
-      autoJoinLeagueVoice: true,
-      disableMicWhenAutoJoin: false
-    },
-    listeningDevice: "default",
-    inputVolume: 100,
-    inputMode: 1,
-    vocalActivationThreshold: 66
-  },
-  blockedUsers: {}
+  }
 };
 
 window.appApi.noSettingsFile((event) => {
@@ -68,7 +46,6 @@ window.updaterAPI.noUpdateAvailable((event) => {
   setTimeout(() => {
     initializeLoginScreenSettings();
     initSettingsDisplay();
-    populateListeningDevicesList();
     jQuery("#clientLoading").fadeOut(500);
     jQuery("#clientLogin").css("display", "flex").hide().fadeIn(500);
   }, 500);

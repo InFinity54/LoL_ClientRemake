@@ -1,8 +1,6 @@
 import { initGlobalSettingsDisplay } from "./settings_client_global";
 import { initNotificationsSettingsDisplay } from "./settings_client_notifications";
-import { initMessagesSettingsDisplay } from "./settings_client_messages";
 import { initAudioSettingsDisplay } from "./settings_client_audio";
-import { initVocalChatSettingsDisplay } from "./settings_client_vocalchat";
 
 jQuery("#settingsModal_closeButton").on("click", (event) => {
   jQuery("#settingsModal").fadeOut(250);
@@ -23,24 +21,13 @@ jQuery(".settingsModal_settingsMenuItem").on("click", (event) => {
 
 function resetDefaultSettings() {
   window.appSettings.global = {
-    lowConfigMode: false,
-    closeClientDuringGame: "off",
     autoCrashReport: true,
     windowSize: "1280x720",
     newsLanguage: "fr"
   };
 
   window.appSettings.notifications = {
-    disableEsportNotification: false,
-    onlyFriendsInvites: false,
-    disableNewIconInCollection: false
-  };
-
-  window.appSettings.messages = {
-    enableLanguageFilter: true,
-    enableClickLinkAdvert: true,
-    enableMoreUnreadBar: true,
-    displayMessagesFromFriendInvites: false
+    disableEsportNotification: false
   };
 
   window.appSettings.audio = {
@@ -57,17 +44,6 @@ function resetDefaultSettings() {
     enableLobbyMusic: true
   };
 
-  window.appSettings.leagueVoice = {
-    groupJoin: {
-      autoJoinLeagueVoice: true,
-      disableMicWhenAutoJoin: false
-    },
-    listeningDevice: "default",
-    inputVolume: 100,
-    inputMode: 1,
-    vocalActivationThreshold: 66
-  }
-
   window.appApi.saveSettings(JSON.stringify(window.appSettings));
   initSettingsDisplay();
 }
@@ -75,9 +51,7 @@ function resetDefaultSettings() {
 function initSettingsDisplay() {
   initGlobalSettingsDisplay();
   initNotificationsSettingsDisplay();
-  initMessagesSettingsDisplay();
   initAudioSettingsDisplay();
-  initVocalChatSettingsDisplay();
 }
 
 export { initSettingsDisplay }

@@ -1,4 +1,4 @@
-#settingsModal_client_generalSettings_closeClientDuringGameContainer, #settingsModal_client_generalSettings_windowSizeContainer, #settingsModal_client_generalSettings_newsLanguageContainer {
+#settingsModal_client_generalSettings_windowSizeContainer, #settingsModal_client_generalSettings_newsLanguageContainer {
   width: 220px;
 
   .form_select_optionsContainer {
@@ -8,44 +8,4 @@
 
 #settingsModal_client_generalSettings_conductCodeLink {
   margin-top: 8px;
-}
-
-#settingsModal_client_generalSettings_phoneNumberCheck_currentState {
-  display: flex;
-  height: 32px;
-  margin-top: 6px;
-  margin-bottom: 6px;
-
-  #settingsModal_client_generalSettings_phoneNumberCheck_phone, #settingsModal_client_generalSettings_phoneNumberCheck_checkmark, #settingsModal_client_generalSettings_phoneNumberCheck_state {
-    width: 32px;
-    height: 32px;
-  }
-
-  #settingsModal_client_generalSettings_phoneNumberCheck_phone, #settingsModal_client_generalSettings_phoneNumberCheck_checkmark {
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  #settingsModal_client_generalSettings_phoneNumberCheck_phone {
-    background-image: url('../../../../img/modals/settings_modal/phonenumbercheck_phone.png');
-  }
-
-  #settingsModal_client_generalSettings_phoneNumberCheck_checkmark {
-    background-image: url('../../../../img/modals/settings_modal/phonenumbercheck_checkmark.png');
-  }
-
-  #settingsModal_client_generalSettings_phoneNumberCheck_state {
-    color: #f0e6d2;
-    font-family: 'Beaufort for LoL', serif;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 19px;
-    line-height: 32px;
-    text-transform: uppercase;
-  }
-}
-
-#settingsModal_client_generalSettings_phoneNumberCheck_removePhoneNumber {
-  width: 220px;
 }
