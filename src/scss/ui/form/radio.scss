@@ -1,0 +1,76 @@
+.form_radio_group {
+  border: none;
+
+  input[type=radio] {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    display: inline-block;
+    padding-left: 19px;
+    color: #949f95;
+    font-size: 12px;
+    font-family: 'Spiegel', serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+  }
+
+  label::before {
+    position: absolute;
+    left: 0;
+    margin-top: 1px;
+    width: 14px;
+    height: 14px;
+    content: "";
+  }
+
+  label::before {
+    background-image: url('../../../../img/ui/form/radio-btn.png');
+    background-position: 0 0;
+    background-size: cover;
+  }
+
+  label:hover::before {
+    background-image: url('../../../../img/ui/form/radio-btn.png');
+    background-position: 0 -14px;
+    background-size: cover;
+  }
+
+  label:active::before {
+    background-image: url('../../../../img/ui/form/radio-btn.png');
+    background-position: 0 -28px;
+    background-size: cover;
+  }
+
+  label:disabled::before {
+    background-image: url('../../../../img/ui/form/radio-btn.png');
+    background-position: 0 -42px;
+    background-size: cover;
+  }
+
+  input[type=radio]:checked + label::before {
+    background-image: url('../../../../img/ui/form/radio-btn.png');
+    background-size: cover;
+    background-position: 0 -56px;
+  }
+
+  input[type=radio]:checked + label:hover::before {
+    background-image: url('../../../../img/ui/form/radio-btn.png');
+    background-size: cover;
+    background-position: 0 -70px;
+  }
+
+  input[type=radio]:checked + label:active::before {
+    background-image: url('../../../../img/ui/form/radio-btn.png');
+    background-size: cover;
+    background-position: 0 -84px;
+  }
+
+  input[type=radio]:checked + label:disabled::before {
+    background-image: url('../../../../img/ui/form/radio-btn.png');
+    background-size: cover;
+    background-position: 0 -98px;
+  }
+}

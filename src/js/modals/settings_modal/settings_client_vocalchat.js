@@ -1,6 +1,8 @@
 const autoJoinLeagueVoice = jQuery("#settingsModal_client_vocalChatSettings_autoJoinLeagueVoice");
 const disableMicWhenAutoJoin = jQuery("#settingsModal_client_vocalChatSettings_disableMicWhenAutoJoin");
 const listeningDeviceContainer = jQuery("#settingsModal_client_vocalChatSettings_listeningDeviceContainer");
+const inputVolume = jQuery("#settingsModal_client_vocalChatSettings_inputVolume");
+const vocalActivationThreshold = jQuery("#settingsModal_client_vocalChatSettings_vocalActivationThreshold");
 
 autoJoinLeagueVoice.on("change", (event) => {
   window.appSettings.leagueVoice.groupJoin.autoJoinLeagueVoice = jQuery(event.target).is(":checked");
@@ -17,9 +19,32 @@ listeningDeviceContainer.on("change", (event) => {
   window.appApi.saveSettings(JSON.stringify(window.appSettings));
 });
 
+vocalActivationThreshold.on("input", (event) => {
+  window.appSettings.leagueVoice.vocalActivationThreshold = event.target.value;
+  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+});
+
+jQuery("input[name='settingsModal_client_vocalChatSettings_inputMode']").on("change", (event) => {
+  window.appSettings.leagueVoice.inputMode = jQuery("input[name='settingsModal_client_vocalChatSettings_inputMode']:checked").val();
+  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+});
+
+inputVolume.on("input", (event) => {
+  window.appSettings.leagueVoice.inputVolume = event.target.value;
+  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+});
+
 function initVocalChatSettingsDisplay() {
   autoJoinLeagueVoice.prop("checked", window.appSettings.notifications.disableEsportNotification);
   disableMicWhenAutoJoin.prop("checked", window.appSettings.notifications.onlyFriendsInvites);
+  inputVolume.val(window.appSettings.leagueVoice.inputVolume).trigger("input");
+  vocalActivationThreshold.val(window.appSettings.leagueVoice.vocalActivationThreshold).trigger("input");
+
+  if (window.appSettings.leagueVoice.inputMode === "2") {
+    jQuery("#settingsModal_client_vocalChatSettings_inputMode_pushToTalk").click();
+  } else {
+    jQuery("#settingsModal_client_vocalChatSettings_inputMode_automaticDetection").click();
+  }
 }
 
 function populateListeningDevicesList() {
@@ -41,7 +66,6 @@ function populateListeningDevicesList() {
 function determineSelectedListeningDevice() {
   for (let i = 0; i < jQuery(listeningDeviceContainer.children()[2]).children().length; i++) {
     const dataValue = jQuery(jQuery(listeningDeviceContainer.children()[2]).children()[i]).attr("data-value");
-    console.log(dataValue, appSettings.leagueVoice.listeningDevice);
 
     if (appSettings.leagueVoice.listeningDevice === dataValue) {
       jQuery(jQuery(listeningDeviceContainer.children()[2]).children()[i]).addClass("selected");

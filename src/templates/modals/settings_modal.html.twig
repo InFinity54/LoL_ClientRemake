@@ -228,7 +228,32 @@
                         <input type="range" value="50" min="0" max="100" id="settingsModal_client_vocalChatSettings_inputVolume" name="settingsModal_client_vocalChatSettings_inputVolume" />
                     </div>
 
-                    <!-- todo: vocal chat entry mode settings area -->
+                    <hr>
+
+                    <h3>Mode d'entrée</h3>
+
+                    <div class="settingsModal_doubleColumn">
+                        <div class="settingsModal_doubleColumn_col1">
+                            <fieldset class="form_radio_group">
+                                <div class="settingsModal_settingsArea_element" id="settingsModal_client_vocalChatSettings_inputMode_automaticDetectionContainer">
+                                    <input type="radio" id="settingsModal_client_vocalChatSettings_inputMode_automaticDetection" name="settingsModal_client_vocalChatSettings_inputMode" checked value="1" />
+                                    <label for="settingsModal_client_vocalChatSettings_inputMode_automaticDetection">Activité vocale</label>
+                                </div>
+
+                                <div class="settingsModal_settingsArea_element" id="settingsModal_client_vocalChatSettings_inputMode_pushToTalkContainer">
+                                    <input type="radio" id="settingsModal_client_vocalChatSettings_inputMode_pushToTalk" name="settingsModal_client_vocalChatSettings_inputMode" value="2" />
+                                    <label for="settingsModal_client_vocalChatSettings_inputMode_pushToTalk">Appuyer pour parler</label>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="settingsModal_doubleColumn_col1">
+                            <div class="form_range_group settingsModal_settingsArea_element" id="settingsModal_client_vocalChatSettings_vocalActivationThresholdContainer">
+                                <label for="settingsModal_client_vocalChatSettings_vocalActivationThreshold">Seuil de l'activation vocale : <span id="settingsModal_client_vocalChatSettings_vocalActivationThresholdValue">66</span>%</label>
+                                <input type="range" value="66" min="0" max="100" id="settingsModal_client_vocalChatSettings_vocalActivationThreshold" name="settingsModal_client_vocalChatSettings_vocalActivationThreshold" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="settingsModal_client_blockedUsersSettingsArea" class="settingsModal_settingsArea_elementsList">

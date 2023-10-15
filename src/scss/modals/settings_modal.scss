@@ -137,6 +137,30 @@
           color: #f0e6d2;
         }
 
+        .settingsModal_doubleColumn {
+          width: 100%;
+          display: flex;
+          gap: 0 5%;
+
+          label {
+            width: 105%;
+          }
+        }
+
+        .settingsModal_doubleColumn_col1 {
+          width: 35%
+        }
+
+        .settingsModal_doubleColumn_col2 {
+          width: 60%;
+        }
+
+        hr {
+          border: none;
+          border-top: 1px solid #1e2328;
+          color: #1e2328;
+        }
+
         @import "settings_modal/client_general";
         @import "settings_modal/client_audio";
       }
