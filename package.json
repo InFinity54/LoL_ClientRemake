@@ -39,8 +39,7 @@
     "electron-squirrel-startup": "^1.0.0",
     "electron-updater": "^6.1.4",
     "jquery": "^3.7.1",
-    "node-fetch": "^3.3.2",
-    "open": "^9.1.0"
+    "node-fetch": "^3.3.2"
   },
   "build": {
     "appId": "fr.infinity54.lol_clientremake",

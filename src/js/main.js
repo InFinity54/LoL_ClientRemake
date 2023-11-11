@@ -2,7 +2,6 @@ const { app, BrowserWindow, ipcMain, Menu } = require('electron');
 import { autoUpdater } from "electron-updater";
 const path = require('path');
 const fs = require("fs");
-const open = require('open');
 
 const isInProdMode = false;
 const settingsFilePath = path.join(app.getPath("userData"), "settings.json");
@@ -113,7 +112,7 @@ const createWindow = () => {
   });
 
   ipcMain.handle('openLink', (event, args) => {
-    open(args);
+    require("electron").shell.openExternal(args);
   });
 };
 
