@@ -30,6 +30,10 @@ window.appSettings = {
     musicVolume: 100,
     enableChampSelectMusic: true,
     enableLobbyMusic: true
+  },
+  user: {
+    nickname: "",
+    region: ""
   }
 };
 
@@ -39,6 +43,14 @@ window.appApi.noSettingsFile((event) => {
 
 window.appApi.updateSettings((event, args) => {
   window.appSettings = JSON.parse(args);
+
+  if (window.appSettings.user.region !== "" && window.appSettings.user.nickname !== "") {
+    //jQuery("#clientLogin_authArea_authForm_region").attr("data-value", window.appSettings.user.region);
+    //jQuery("#clientLogin_authArea_authForm_regionContainer .form_select_option").removeClass("selected");
+    jQuery("#clientLogin_authArea_authForm_regionContainer .form_select_option[data-value=" + window.appSettings.user.region + "]").trigger("click");
+    jQuery("#clientLogin_authArea_authForm_rememberMe").trigger("click");
+    jQuery("#clientLogin_authArea_authForm_username").val(window.appSettings.user.nickname).trigger("input");
+  }
 });
 
 window.updaterAPI.noUpdateAvailable((event) => {

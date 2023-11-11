@@ -44,6 +44,11 @@ function resetDefaultSettings() {
     enableLobbyMusic: true
   };
 
+  window.appSettings.user = {
+    nickname: "",
+    region: ""
+  };
+
   window.appApi.saveSettings(JSON.stringify(window.appSettings));
   initSettingsDisplay();
 }

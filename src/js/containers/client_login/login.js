@@ -24,13 +24,16 @@ function enableLoginButton() {
 }
 
 loginButton.on("click", (event) => {
-  let alertText = "Bienvenue sur League of Legends, " + loginForm_username.val() + " !";
-
   if (rememberMe.is(":checked")) {
-    alertText += "\r\nVotre nom d'utilisateur sera sauvegardé dans les paramètres de l'application. Vous serez connecté automatiquement au prochain démarrage du jeu."
+    window.appSettings.user.nickname = loginForm_username.val();
+    window.appSettings.user.region = jQuery("#clientLogin_authArea_authForm_region").attr("data-value");
+  } else {
+    window.appSettings.user.nickname = "";
+    window.appSettings.user.region = "";
   }
 
-  alert(alertText);
+  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  //todo: login
 });
 
 forgotUsernameLink.on("click", (event) => {
@@ -40,3 +43,4 @@ forgotUsernameLink.on("click", (event) => {
 forgotPasswordLink.on("click", (event) => {
   window.appApi.openLink("https://recovery.riotgames.com/fr/forgot-password");
 });
+
