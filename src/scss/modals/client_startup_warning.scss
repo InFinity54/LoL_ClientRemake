@@ -7,19 +7,6 @@
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 998;
 
-  #clientStartupWarningModal_externalBorder {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 623px;
-    height: 79px;
-    border: 2px solid #463714;
-    border-radius: 10px;
-    background-color: #010a13;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 999;
-  }
-
   #clientStartupWarningModal_content {
     position: fixed;
     top: 50%;
