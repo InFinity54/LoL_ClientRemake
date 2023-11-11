@@ -54,8 +54,11 @@ window.appApi.updateSettings((event, args) => {
 });
 
 window.updaterAPI.noUpdateAvailable((event) => {
-  loadingProgressBar.css("width", "100%");
+  loadingProgressBar.css("width", "75%");
 
+  // todo: retrieve current League version from LeagueStats' DDragon server
+
+  loadingProgressBar.css("width", "100%"); // temporary line: will be removed when previous task will be done
   setTimeout(() => {
     initializeLoginScreenSettings();
     initSettingsDisplay();
@@ -78,8 +81,6 @@ window.updaterAPI.updateDownloading((event, args) => {
 });
 
 window.updaterAPI.updateDownloaded((event) => {
-  loadingProgressText.html("Préparation");
-
   setTimeout(() => {
     loadingProgressBar.css("width", "33%");
   }, 1000);
