@@ -5,6 +5,8 @@ import checkboxClickSound from '../../../snd/ui/forms/checkbox_click.ogg';
 function playSound(file) {
     if (window.appSettings.audio.enableAudio) {
         const audioElement = new Audio(file);
+        audioElement.volume = window.appSettings.audio.audioGlobalVolume / 100;
+
         const audioPlaying = audioElement.play();
 
         if (audioPlaying !== undefined) {
