@@ -5,6 +5,7 @@ import '../scss/app.scss';
 import "./app";
 
 // JS des modales
+import "./modals/client_startup_warning";
 import "./modals/settings_modal/settings";
 import "./modals/settings_modal/settings_client_global";
 import "./modals/settings_modal/settings_client_notifications";

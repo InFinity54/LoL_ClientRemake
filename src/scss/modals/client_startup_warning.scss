@@ -1,0 +1,64 @@
+#clientStartupWarningModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+
+  #clientStartupWarningModal_externalBorder {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 623px;
+    height: 79px;
+    border: 2px solid #463714;
+    border-radius: 10px;
+    background-color: #010a13;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 999;
+  }
+
+  #clientStartupWarningModal_content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 623px;
+    height: 79px;
+    border: 2px solid #463714;
+    background-color: #010a13;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1000;
+
+    #clientStartupWarningModal_messageArea {
+      display: flex;
+      width: 100%;
+      margin-top: 8px;
+      margin-bottom: 31px;
+      color: #949f95;
+      font-size: 12px;
+      font-family: "Spiegel", serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+    }
+
+    #clientStartupWarningModal_closeButtonArea {
+      width: 104px;
+      height: 11px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      background-color: #010a13;
+      border-left: 2px solid #463714;
+      border-right: 2px solid #463714;
+      transform: rotateX(180deg);
+    }
+
+    #clientStartupWarningModal_closeButton {
+      width: 100px;
+      transform: rotateX(180deg);
+    }
+  }
+}
