@@ -3,11 +3,11 @@
   top: 2px;
   right: 0;
   display: flex;
-  width: 138px;
+  width: 105px;
   height: 26px;
   z-index: 997;
 
-  #windowButton_help, #windowButton_reduce, #windowButton_settings, #windowButton_exit {
+  #windowButton_reduce, #windowButton_settings, #windowButton_exit {
     width: 16px;
     height: 16px;
     margin-top: 5px;
@@ -18,13 +18,8 @@
     background-size: 12px 12px;
   }
 
-  #windowButton_help, #windowButton_reduce, #windowButton_settings {
+  #windowButton_reduce, #windowButton_settings {
     margin-right: 22px;
-  }
-
-  #windowButton_help {
-    margin-left: 14px;
-    background-image: url("../../../img/containers/window_buttons/windowbutton_help.png");
   }
 
   #windowButton_reduce {
@@ -40,7 +35,7 @@
     background-image: url("../../../img/containers/window_buttons/windowbutton_close.png");
   }
 
-  #windowButton_help:hover, #windowButton_reduce:hover, #windowButton_settings:hover, #windowButton_exit:hover {
+  #windowButton_reduce:hover, #windowButton_settings:hover, #windowButton_exit:hover {
     opacity: 1;
   }
 }
