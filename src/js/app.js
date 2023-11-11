@@ -1,3 +1,4 @@
+import { playSound, defaultButtonHoverSound, defaultButtonClickSound, checkboxClickSound } from "./global/audio";
 import { startLoginScreenVideo } from "./containers/client_login/video";
 import { startLoginScreenMusic } from "./containers/client_login/music";
 import { initSettingsDisplay } from "./modals/settings_modal/settings";
@@ -93,3 +94,15 @@ function initializeLoginScreenSettings() {
     jQuery("#clientLogin_videoArea_controls_videoSettings_disableVideoSound").attr("checked", "checked");
   }
 }
+
+jQuery("button:not(:disabled)")
+    .on("mouseover", (event) => {
+      playSound(defaultButtonHoverSound);
+    })
+    .on("click", (event) => {
+      playSound(defaultButtonClickSound);
+    });
+
+jQuery("input[type=checkbox]").on("click", (event) => {
+  playSound(checkboxClickSound);
+});
