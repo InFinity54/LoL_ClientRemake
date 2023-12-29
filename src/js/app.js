@@ -2,8 +2,15 @@ import { playSound, defaultButtonHoverSound, defaultButtonClickSound, checkboxCl
 import { startLoginScreenVideo } from "./containers/client_login/video";
 import { startLoginScreenMusic } from "./containers/client_login/music";
 import { initSettingsDisplay } from "./modals/settings_modal/settings";
+import { enableLoginButton } from "./containers/client_login/login";
 const loadingProgressBar = jQuery("#clientLoading_currentProgress");
 const loadingProgressText = jQuery("#clientLoading_progressText");
+
+window.riotApiKey = "RGAPI-9b78b997-b7f0-4d80-96a4-d6589750feef";
+window.leagueReferenceVersion = {
+  short: "V13.24",
+  full: "V13.24.547.5912"
+};
 
 window.appSettings = {
   loginScreen: {
@@ -32,8 +39,7 @@ window.appSettings = {
     enableLobbyMusic: true
   },
   user: {
-    nickname: "",
-    region: ""
+    nickname: ""
   }
 };
 
@@ -62,6 +68,7 @@ window.updaterAPI.noUpdateAvailable((event) => {
   setTimeout(() => {
     initializeLoginScreenSettings();
     initSettingsDisplay();
+    enableLoginButton();
     jQuery("#clientLoading").fadeOut(500);
     jQuery("#clientLogin").css("display", "flex").hide().fadeIn(500);
   }, 500);

@@ -1,0 +1,107 @@
+#clientContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 2px);
+  background-color: #010a13;
+  z-index: 996;
+  border-top: 2px solid #715c36;
+  display: none;
+
+  #clientContent_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 79px;
+    border-bottom: 1px solid #3c474e;
+    z-index: 990;
+
+    #clientContent_menu_leagueLogo {
+      position: absolute;
+      top: 13px;
+      left: 17px;
+      width: 64px;
+      height: 54px;
+    }
+
+    #clientContent_menu_lobbyButtonContainer {
+      position: absolute;
+      top: 12px;
+      left: 50px;
+      width: 146px;
+      height: 58px;
+
+      #clientContent_menu_lobbyButton, #clientContent_menu_lobbyButtonOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 146px;
+        height: 58px;
+      }
+
+      #clientContent_menu_lobbyButton {
+        z-index: 991;
+      }
+
+      #clientContent_menu_lobbyButtonOverlay {
+        z-index: 992;
+      }
+
+      #clientContent_menu_lobbyButton_textOverlay {
+        position: absolute;
+        top: 14px;
+        left: 24px;
+        width: 111px;
+        height: 29px;
+        line-height: 29px;
+        font-family: 'Beaufort for LoL';
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #e6dcc9;
+        z-index: 993;
+      }
+    }
+
+    #clientContent_menu_lobbyButton {
+      position: absolute;
+      top: 13px;
+      left: 17px;
+      width: 146px;
+      height: 58px;
+    }
+
+    #clientContent_menu_lobbyButton_textOverlay {
+      position: absolute;
+      top: 13px;
+      left: 17px;
+      width: 146px;
+      height: 58px;
+      z-index: 991;
+    }
+  }
+
+  #clientContent_mainArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 224px);
+    height: 100vh;
+    background-image: url("../../../img/Capture d'écran 2023-12-29 061948.png");
+    opacity: 0.5;
+  }
+
+  #clientContent_socialArea {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 224px;
+    height: 100vh;
+    background-image: url("../../../img/Capture d'écran 2023-12-29 061948.png");
+    background-position: center right;
+    opacity: 0.5;
+  }
+}
