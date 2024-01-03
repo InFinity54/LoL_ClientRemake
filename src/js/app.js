@@ -63,6 +63,18 @@ window.updaterAPI.noUpdateAvailable((event) => {
   loadingProgressBar.css("width", "75%");
 
   // todo: retrieve current League version from LeagueStats' DDragon server
+  jQuery.ajax({
+    url: "https://leaguestats.infinity54.fr/riot/lol/latest/data/fr_FR/champion.json",
+    type: "GET",
+    crossDomain: true,
+    dataType: "json",
+    success: function (data) {
+      //console.log(data);
+    },
+    error: function (qXHR, textStatus, errorThrown) {
+      //alert(errorThrown);
+    }
+  });
 
   loadingProgressBar.css("width", "100%"); // temporary line: will be removed when previous task will be done
   setTimeout(() => {

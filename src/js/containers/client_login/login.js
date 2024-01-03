@@ -1,4 +1,4 @@
-import { startLeagueLogoLoop, startLeagueLobbyButtonVideo } from "./video";
+import { startLeagueLogoLoop, startLeaguePlayButtonVideo } from "./video";
 const loginForm_username = jQuery("#clientLogin_authArea_authForm_username");
 const rememberMe = jQuery("#clientLogin_authArea_authForm_rememberMe");
 const loginButton = jQuery("#clientLogin_signInButton");
@@ -42,7 +42,7 @@ loginButton.on("click", (event) => {
 
   setTimeout(() => {
     startLeagueLogoLoop();
-    startLeagueLobbyButtonVideo();
+    startLeaguePlayButtonVideo();
 
     loadingProgress.css("width", "100%");
     loadingPage.fadeOut(500);

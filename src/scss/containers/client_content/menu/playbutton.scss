@@ -1,0 +1,42 @@
+#clientContent_menu_playButtonContainer {
+  position: absolute;
+  top: 12px;
+  left: 50px;
+  width: 146px;
+  height: 58px;
+
+  #clientContent_menu_playButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 146px;
+    height: 58px;
+    z-index: 991;
+  }
+
+  #clientContent_menu_playButtonOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 146px;
+    height: 58px;
+    z-index: 992;
+    display: none;
+  }
+
+  #clientContent_menu_playButton_textOverlay {
+    position: absolute;
+    top: 14px;
+    left: 1px;
+    width: 146px;
+    height: 58px;
+    line-height: 29px;
+    font-family: 'Beaufort for LoL';
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e6dcc9;
+    z-index: 993;
+  }
+}

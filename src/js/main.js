@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, Menu } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu, session } = require('electron');
 import { autoUpdater } from "electron-updater";
 const path = require('path');
 const fs = require("fs");
@@ -137,6 +137,15 @@ app.on('ready', () => {
         ]
       }
     ];
+
+    session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+      callback({
+        responseHeaders: {
+          ...details.responseHeaders,
+          'Content-Security-Policy': ["default-src 'self' data: 'unsafe-inline' 'unsafe-eval' https://leaguestats.infinity54.fr"]
+        }
+      })
+    });
 
     Menu.setApplicationMenu(Menu.buildFromTemplate(menuTemplate));
   }

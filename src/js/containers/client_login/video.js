@@ -1,8 +1,12 @@
 import videoBackground from "../../../../mov/containers/client_login/loginscreen_videobackground.webm";
 import leagueLogoLoop from "../../../../mov/containers/client_content/menu/leaguelogo_loop.webm";
-import leagueLobbyButtonHover from "../../../../mov/containers/client_content/menu/lobbybutton/lobbybutton_hover.webm";
-import leagueLobbyButtonIntro from "../../../../mov/containers/client_content/menu/lobbybutton/lobbybutton_intro.webm";
-import leagueLobbyButtonRelease from "../../../../mov/containers/client_content/menu/lobbybutton/lobbybutton_release.webm";
+import leaguePlayButtonEnabled from "../../../../mov/containers/client_content/menu/playbutton/playbutton_enabled.webm";
+import leaguePlayButtonHoverIntro from "../../../../mov/containers/client_content/menu/playbutton/playbutton_hover_intro.webm";
+import leaguePlayButtonHoverLoop from "../../../../mov/containers/client_content/menu/playbutton/playbutton_hover_loop.webm";
+import leaguePlayButtonHoverOutro from "../../../../mov/containers/client_content/menu/playbutton/playbutton_hover_outro.webm";
+import leaguePlayButtonRelease from "../../../../mov/containers/client_content/menu/playbutton/playbutton_release.webm";
+import leaguePlayButtonMagicRelease from "../../../../mov/containers/client_content/menu/playbutton/playbutton_magicrelease.webm";
+import { disablePlayButton } from "../client_content/menu/playbutton";
 
 const videoSettings_disableVideo = jQuery("#clientLogin_videoArea_controls_videoSettings_disableVideo");
 const videoPlayer = jQuery("#clientLogin_videoArea_player");
@@ -41,29 +45,41 @@ function startLeagueLogoLoop() {
   leagueLogoPlayer[0].play();
 }
 
-function startLeagueLobbyButtonVideo() {
-  const leagueLobbyButtonContainer = jQuery("#clientContent_menu_lobbyButtonContainer");
-  const leagueLobbyButtonPlayer = jQuery("#clientContent_menu_lobbyButton");
-  const leagueLobbyButtonOverlayPlayer = jQuery("#clientContent_menu_lobbyButtonOverlay");
+function startLeaguePlayButtonVideo() {
+  const leaguePlayButtonContainer = jQuery("#clientContent_menu_playButtonContainer");
+  const leaguePlayButtonPlayer = jQuery("#clientContent_menu_playButton");
+  const leaguePlayButtonOverlayPlayer = jQuery("#clientContent_menu_playButtonOverlay");
 
-  leagueLobbyButtonPlayer.attr("src", leagueLobbyButtonIntro);
-  leagueLobbyButtonPlayer[0].loop = false;
-  leagueLobbyButtonPlayer[0].currentTime = 0;
-  leagueLobbyButtonPlayer[0].play();
+  leaguePlayButtonPlayer.attr("src", leaguePlayButtonEnabled);
+  leaguePlayButtonPlayer[0].loop = false;
+  leaguePlayButtonPlayer[0].currentTime = 0;
+  leaguePlayButtonPlayer[0].play();
 
-  leagueLobbyButtonOverlayPlayer.attr("src", leagueLobbyButtonHover);
-  leagueLobbyButtonOverlayPlayer[0].loop = true;
-  leagueLobbyButtonOverlayPlayer[0].currentTime = 0;
-
-  leagueLobbyButtonContainer.on("mouseover", () => {
-    leagueLobbyButtonOverlayPlayer[0].currentTime = 0;
-    leagueLobbyButtonOverlayPlayer[0].play();
-    leagueLobbyButtonOverlayPlayer.fadeIn(500);
+  leaguePlayButtonContainer.on("mouseover", () => {
+    leaguePlayButtonOverlayPlayer.attr("src", leaguePlayButtonHoverLoop);
+    leaguePlayButtonOverlayPlayer[0].loop = true;
+    leaguePlayButtonOverlayPlayer[0].currentTime = 0;
+    leaguePlayButtonOverlayPlayer[0].play();
+    leaguePlayButtonOverlayPlayer.fadeIn(500);
   });
 
-  leagueLobbyButtonContainer.on("mouseleave", () => {
-    leagueLobbyButtonOverlayPlayer.fadeOut(500);
+  leaguePlayButtonContainer.on("mouseleave", () => {
+    leaguePlayButtonOverlayPlayer.fadeOut(500);
+
+    setTimeout(() => {
+      leaguePlayButtonOverlayPlayer[0].pause();
+    }, 500);
+  });
+
+  leaguePlayButtonContainer.on("click", () => {
+    if (leaguePlayButtonPlayer.attr("src") !== leaguePlayButtonRelease) {
+      leaguePlayButtonPlayer.attr("src", leaguePlayButtonRelease);
+      leaguePlayButtonPlayer[0].loop = false;
+      leaguePlayButtonPlayer[0].currentTime = 0;
+      leaguePlayButtonPlayer[0].play();
+      disablePlayButton();
+    }
   });
 }
 
-export { startLoginScreenVideo, stopLoginScreenVideo, startLeagueLogoLoop, startLeagueLobbyButtonVideo };
+export { startLoginScreenVideo, stopLoginScreenVideo, startLeagueLogoLoop, startLeaguePlayButtonVideo };
