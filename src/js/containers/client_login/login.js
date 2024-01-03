@@ -1,4 +1,5 @@
-import { startLeagueLogoLoop, startLeaguePlayButtonVideo } from "./video";
+import { startLeagueLogoLoop } from "./video";
+import { startLeaguePlayButtonVideo } from "../client_content/menu/playbutton";
 const loginForm_username = jQuery("#clientLogin_authArea_authForm_username");
 const rememberMe = jQuery("#clientLogin_authArea_authForm_rememberMe");
 const loginButton = jQuery("#clientLogin_signInButton");

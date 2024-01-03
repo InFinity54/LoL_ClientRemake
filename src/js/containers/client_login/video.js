@@ -1,13 +1,5 @@
 import videoBackground from "../../../../mov/containers/client_login/loginscreen_videobackground.webm";
 import leagueLogoLoop from "../../../../mov/containers/client_content/menu/leaguelogo_loop.webm";
-import leaguePlayButtonEnabled from "../../../../mov/containers/client_content/menu/playbutton/playbutton_enabled.webm";
-import leaguePlayButtonHoverIntro from "../../../../mov/containers/client_content/menu/playbutton/playbutton_hover_intro.webm";
-import leaguePlayButtonHoverLoop from "../../../../mov/containers/client_content/menu/playbutton/playbutton_hover_loop.webm";
-import leaguePlayButtonHoverOutro from "../../../../mov/containers/client_content/menu/playbutton/playbutton_hover_outro.webm";
-import leaguePlayButtonRelease from "../../../../mov/containers/client_content/menu/playbutton/playbutton_release.webm";
-import leaguePlayButtonMagicRelease from "../../../../mov/containers/client_content/menu/playbutton/playbutton_magicrelease.webm";
-import { disablePlayButton } from "../client_content/menu/playbutton";
-
 const videoSettings_disableVideo = jQuery("#clientLogin_videoArea_controls_videoSettings_disableVideo");
 const videoPlayer = jQuery("#clientLogin_videoArea_player");
 videoPlayer.attr("src", videoBackground);
@@ -45,41 +37,4 @@ function startLeagueLogoLoop() {
   leagueLogoPlayer[0].play();
 }
 
-function startLeaguePlayButtonVideo() {
-  const leaguePlayButtonContainer = jQuery("#clientContent_menu_playButtonContainer");
-  const leaguePlayButtonPlayer = jQuery("#clientContent_menu_playButton");
-  const leaguePlayButtonOverlayPlayer = jQuery("#clientContent_menu_playButtonOverlay");
-
-  leaguePlayButtonPlayer.attr("src", leaguePlayButtonEnabled);
-  leaguePlayButtonPlayer[0].loop = false;
-  leaguePlayButtonPlayer[0].currentTime = 0;
-  leaguePlayButtonPlayer[0].play();
-
-  leaguePlayButtonContainer.on("mouseover", () => {
-    leaguePlayButtonOverlayPlayer.attr("src", leaguePlayButtonHoverLoop);
-    leaguePlayButtonOverlayPlayer[0].loop = true;
-    leaguePlayButtonOverlayPlayer[0].currentTime = 0;
-    leaguePlayButtonOverlayPlayer[0].play();
-    leaguePlayButtonOverlayPlayer.fadeIn(500);
-  });
-
-  leaguePlayButtonContainer.on("mouseleave", () => {
-    leaguePlayButtonOverlayPlayer.fadeOut(500);
-
-    setTimeout(() => {
-      leaguePlayButtonOverlayPlayer[0].pause();
-    }, 500);
-  });
-
-  leaguePlayButtonContainer.on("click", () => {
-    if (leaguePlayButtonPlayer.attr("src") !== leaguePlayButtonRelease) {
-      leaguePlayButtonPlayer.attr("src", leaguePlayButtonRelease);
-      leaguePlayButtonPlayer[0].loop = false;
-      leaguePlayButtonPlayer[0].currentTime = 0;
-      leaguePlayButtonPlayer[0].play();
-      disablePlayButton();
-    }
-  });
-}
-
-export { startLoginScreenVideo, stopLoginScreenVideo, startLeagueLogoLoop, startLeaguePlayButtonVideo };
+export { startLoginScreenVideo, stopLoginScreenVideo, startLeagueLogoLoop };
