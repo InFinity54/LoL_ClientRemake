@@ -1,19 +1,19 @@
 import musicBackground from "../../../../snd/containers/client_login/loginscreen_musicbackground.ogg";
-const audioPlayer = new Audio(musicBackground);
+import { playSound } from "../../global/audio";
+let audioPlayer;
 const audioSettings_disableSound = jQuery("#clientLogin_videoArea_controls_videoSettings_disableVideoSound");
 
 function startLoginScreenMusic() {
-  audioPlayer.play();
-
-  audioPlayer.addEventListener('ended', function() {
-    audioPlayer.src = musicBackground;
-    startLoginScreenMusic();
-  });
+  if (window.appSettings.audio.enableAudio) {
+    audioPlayer = playSound(musicBackground, true);
+  }
 }
 
 function stopLoginScreenMusic() {
-  audioPlayer.pause();
-  audioPlayer.src = musicBackground;
+  if (audioPlayer !== undefined) {
+    audioPlayer.pause();
+    audioPlayer.remove();
+  }
 }
 
 audioSettings_disableSound.change(function() {
