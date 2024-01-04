@@ -26,6 +26,8 @@ function playSound(file, loop = false) {
                 this.remove();
             });
         }
+
+        return audioElement;
     }
 }
 

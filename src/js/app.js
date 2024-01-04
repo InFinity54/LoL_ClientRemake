@@ -6,7 +6,7 @@ import { enableLoginButton } from "./containers/client_login/login";
 const loadingProgressBar = jQuery("#clientLoading_currentProgress");
 const loadingProgressText = jQuery("#clientLoading_progressText");
 
-window.riotApiKey = "RGAPI-9b78b997-b7f0-4d80-96a4-d6589750feef";
+window.riotApiKey = "RGAPI-23fc8e00-aa50-4c8a-98e5-28fa1a9002de";
 
 window.appData = {
   league: {
@@ -14,6 +14,11 @@ window.appData = {
       short: "13.24",
       full: "13.24.547.5912"
     }
+  },
+  user: {
+    gameName: "",
+    tagLine: "",
+    puuid: ""
   }
 }
 
@@ -134,3 +139,5 @@ jQuery("button:not(:disabled)")
 jQuery("input[type=checkbox]").on("click", (event) => {
   playSound(checkboxClickSound);
 });
+
+export { initializeLoginScreenSettings }

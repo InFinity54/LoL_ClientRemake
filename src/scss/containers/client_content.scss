@@ -9,34 +9,51 @@
   border-top: 2px solid #715c36;
   display: none;
 
-  #clientContent_menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 79px;
-    border-bottom: 1px solid #3c474e;
-    z-index: 990;
-
-    #clientContent_menu_leagueLogo {
-      position: absolute;
-      top: 13px;
-      left: 17px;
-      width: 64px;
-      height: 54px;
-    }
-
-    @import "client_content/menu/playbutton.scss";
-  }
-
   #clientContent_mainArea {
     position: absolute;
     top: 0;
     left: 0;
     width: calc(100vw - 224px);
     height: 100vh;
+    background-color: #010a13;
+
+    #clientContent_menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 79px;
+      border-bottom: 1px solid #3c474e;
+      z-index: 990;
+
+      #clientContent_menu_leagueLogo {
+        position: absolute;
+        top: 13px;
+        left: 17px;
+        width: 64px;
+        height: 54px;
+      }
+
+      @import "client_content/menu/playbutton";
+    }
+  }
+
+  #clientContent_mainArea:before, #clientContent_socialArea:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
     background-image: url("../../../img/Capture d'écran 2023-12-29 061948.png");
-    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #clientContent_mainArea:before {
+    background-position: center left;
   }
 
   #clientContent_socialArea {
@@ -45,8 +62,12 @@
     right: 0;
     width: 224px;
     height: 100vh;
-    background-image: url("../../../img/Capture d'écran 2023-12-29 061948.png");
+    background-color: #010a13;
+
+    @import "client_content/socialarea/user";
+  }
+
+  #clientContent_socialArea:before {
     background-position: center right;
-    opacity: 0.5;
   }
 }

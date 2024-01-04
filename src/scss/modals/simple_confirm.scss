@@ -1,4 +1,4 @@
-#clientStartupWarningModal {
+#simpleConfirmModal {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,19 +7,18 @@
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 998;
 
-  #clientStartupWarningModal_content {
+  #simpleConfirmModal_content {
     position: fixed;
     top: 50%;
     left: 50%;
     width: 623px;
-    height: 79px;
+    height: fit-content;
     border: 2px solid #463714;
     background-color: #010a13;
     transform: translateX(-50%) translateY(-50%);
     z-index: 1000;
 
-    #clientStartupWarningModal_messageArea {
-      display: flex;
+    #simpleConfirmModal_messageArea {
       width: 100%;
       margin-top: 8px;
       margin-bottom: 31px;
@@ -31,7 +30,7 @@
       text-align: center;
     }
 
-    #clientStartupWarningModal_closeButtonArea {
+    #simpleConfirmModal_closeButtonArea {
       width: 104px;
       height: 11px;
       margin-left: auto;
@@ -43,7 +42,7 @@
       transform: rotateX(180deg);
     }
 
-    #clientStartupWarningModal_closeButton {
+    #simpleConfirmModal_closeButton {
       width: 100px;
       transform: rotateX(180deg);
     }
