@@ -49,7 +49,7 @@ function resetDefaultSettings() {
     region: ""
   };
 
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
   initSettingsDisplay();
 }
 

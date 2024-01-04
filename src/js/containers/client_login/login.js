@@ -32,7 +32,7 @@ loginButton.on("click", (event) => {
     window.appSettings.user.region = "";
   }
 
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 
   loadingText.html("Chargement");
   loadingProgress.css("width", "0%");
@@ -52,15 +52,15 @@ loginButton.on("click", (event) => {
 });
 
 createAccountButton.on("click", (event) => {
-  window.appApi.openLink("https://authenticate.riotgames.com");
+  window.appAPI.openLink("https://authenticate.riotgames.com");
 });
 
 forgotUsernameLink.on("click", (event) => {
-  window.appApi.openLink("https://recovery.riotgames.com/fr/forgot-username");
+  window.appAPI.openLink("https://recovery.riotgames.com/fr/forgot-username");
 });
 
 forgotPasswordLink.on("click", (event) => {
-  window.appApi.openLink("https://recovery.riotgames.com/fr/forgot-password");
+  window.appAPI.openLink("https://recovery.riotgames.com/fr/forgot-password");
 });
 
 export { enableLoginButton }

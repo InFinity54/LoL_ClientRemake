@@ -1,5 +1,5 @@
 jQuery("#windowButton_help").on("click", (event) => {
-  window.appApi.openLink("https://support.riotgames.com/hc/fr");
+  window.appAPI.openLink("https://support.riotgames.com/hc/fr");
 });
 
 jQuery("#windowButton_reduce").on("click", (event) => {

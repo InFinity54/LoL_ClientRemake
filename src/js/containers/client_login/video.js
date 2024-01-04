@@ -25,7 +25,7 @@ videoSettings_disableVideo.change(function() {
   }
 
   window.appSettings.loginScreen.videoEnabled = !this.checked;
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 

@@ -1,8 +1,8 @@
-const { app, BrowserWindow, ipcMain, Menu, session } = require('electron');
-import { autoUpdater } from "electron-updater";
+const { app, BrowserWindow, ipcMain, Menu, session, net } = require('electron');
+import {autoUpdater} from "electron-updater";
+
 const path = require('path');
 const fs = require("fs");
-
 const isInProdMode = false;
 const settingsFilePath = path.join(app.getPath("userData"), "settings.json");
 
@@ -113,6 +113,33 @@ const createWindow = () => {
 
   ipcMain.handle('openLink', (event, args) => {
     require("electron").shell.openExternal(args);
+  });
+
+  ipcMain.handle('onlineRequest', async (event, args) => {
+    return new Promise((resolve, reject) => {
+      const request = net.request(args.url);
+
+      request.on('response', (response) => {
+        let data = "";
+
+        response.on('data', (chunk) => {
+          data += chunk;
+        });
+
+        response.on('end', () => {
+          resolve(JSON.stringify({
+            response: response,
+            content: data
+          }));
+        });
+
+        response.on('error', (err) => {
+          reject(JSON.stringify(err));
+        })
+      });
+
+      request.end();
+    });
   });
 };
 

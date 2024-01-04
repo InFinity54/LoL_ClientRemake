@@ -15,11 +15,12 @@ contextBridge.exposeInMainWorld('windowAPI', {
 });
 
 // App API
-contextBridge.exposeInMainWorld('appApi', {
+contextBridge.exposeInMainWorld('appAPI', {
   getAppVersion: () => ipcRenderer.invoke('getAppVersion'),
   appExit: (response) => ipcRenderer.on('appMainFormIsReady', (response)),
   noSettingsFile: (response) => ipcRenderer.on('noSettingsFile', (response)),
   updateSettings: (response) => ipcRenderer.on('updateSettings', (response)),
   saveSettings: (args) => ipcRenderer.invoke('saveSettings', args),
-  openLink: (args) => ipcRenderer.invoke('openLink', args)
+  openLink: (args) => ipcRenderer.invoke('openLink', args),
+  onlineRequest: (args) => ipcRenderer.invoke('onlineRequest', args)
 });

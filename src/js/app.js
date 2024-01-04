@@ -7,10 +7,15 @@ const loadingProgressBar = jQuery("#clientLoading_currentProgress");
 const loadingProgressText = jQuery("#clientLoading_progressText");
 
 window.riotApiKey = "RGAPI-9b78b997-b7f0-4d80-96a4-d6589750feef";
-window.leagueReferenceVersion = {
-  short: "V13.24",
-  full: "V13.24.547.5912"
-};
+
+window.appData = {
+  league: {
+    referenceVersion: {
+      short: "13.24",
+      full: "13.24.547.5912"
+    }
+  }
+}
 
 window.appSettings = {
   loginScreen: {
@@ -43,16 +48,14 @@ window.appSettings = {
   }
 };
 
-window.appApi.noSettingsFile((event) => {
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+window.appAPI.noSettingsFile((event) => {
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
-window.appApi.updateSettings((event, args) => {
+window.appAPI.updateSettings((event, args) => {
   window.appSettings = JSON.parse(args);
 
   if (window.appSettings.user.region !== "" && window.appSettings.user.nickname !== "") {
-    //jQuery("#clientLogin_authArea_authForm_region").attr("data-value", window.appSettings.user.region);
-    //jQuery("#clientLogin_authArea_authForm_regionContainer .form_select_option").removeClass("selected");
     jQuery("#clientLogin_authArea_authForm_regionContainer .form_select_option[data-value=" + window.appSettings.user.region + "]").trigger("click");
     jQuery("#clientLogin_authArea_authForm_rememberMe").trigger("click");
     jQuery("#clientLogin_authArea_authForm_username").val(window.appSettings.user.nickname).trigger("input");
@@ -60,35 +63,28 @@ window.appApi.updateSettings((event, args) => {
 });
 
 window.updaterAPI.noUpdateAvailable((event) => {
-  loadingProgressBar.css("width", "75%");
+  window.appAPI.onlineRequest({
+    url: 'https://leaguestats.infinity54.fr/riot/lol/latest/manifest.json'
+  }).then((result) => {
+    let resultJson = JSON.parse(result);
+    resultJson.content = JSON.parse(resultJson.content);
+    jQuery("#clientLogin_version").html(`V${resultJson.content.v}`);
+    //jQuery("#clientLogin_version").html(`V${resultJson.content.v.substring(0, resultJson.content.v.length - 2)}`);
+    loadingProgressBar.css("width", "100%");
 
-  // todo: retrieve current League version from LeagueStats' DDragon server
-  jQuery.ajax({
-    url: "https://leaguestats.infinity54.fr/riot/lol/latest/data/fr_FR/champion.json",
-    type: "GET",
-    crossDomain: true,
-    dataType: "json",
-    success: function (data) {
-      //console.log(data);
-    },
-    error: function (qXHR, textStatus, errorThrown) {
-      //alert(errorThrown);
-    }
+    setTimeout(() => {
+      initializeLoginScreenSettings();
+      initSettingsDisplay();
+      enableLoginButton();
+      jQuery("#clientLoading").fadeOut(500);
+      jQuery("#clientLogin").css("display", "flex").hide().fadeIn(500);
+    }, 500);
+
+    setTimeout(() => {
+      loadingProgressText.html("Chargement");
+      loadingProgressBar.css("width", "0%");
+    }, 1000);
   });
-
-  loadingProgressBar.css("width", "100%"); // temporary line: will be removed when previous task will be done
-  setTimeout(() => {
-    initializeLoginScreenSettings();
-    initSettingsDisplay();
-    enableLoginButton();
-    jQuery("#clientLoading").fadeOut(500);
-    jQuery("#clientLogin").css("display", "flex").hide().fadeIn(500);
-  }, 500);
-
-  setTimeout(() => {
-    loadingProgressText.html("Chargement");
-    loadingProgressBar.css("width", "0%");
-  }, 1000);
 });
 
 window.updaterAPI.updateAvailable((event, args) => {

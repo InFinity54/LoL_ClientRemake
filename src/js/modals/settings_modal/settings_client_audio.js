@@ -22,7 +22,7 @@ const enableLobbyMusicCheckbox = jQuery("#settingsModal_client_audioSettings_ena
 
 enableAudioCheckbox.on("change", (event) => {
   window.appSettings.audio.enableAudio = jQuery(event.target).is(":checked");
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 
   if (jQuery(event.target).is(":checked")) {
     showAllSettings();
@@ -33,12 +33,12 @@ enableAudioCheckbox.on("change", (event) => {
 
 audioGlobalVolumeInput.on("input", (event) => {
   window.appSettings.audio.audioGlobalVolume = event.target.value;
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 enableSfxCheckbox.on("change", (event) => {
   window.appSettings.audio.enableSfx = jQuery(event.target).is(":checked");
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 
   if (jQuery(event.target).is(":checked")) {
     showSfxSettings();
@@ -49,27 +49,27 @@ enableSfxCheckbox.on("change", (event) => {
 
 sfxVolumeInput.on("input", (event) => {
   window.appSettings.audio.sfxVolume = event.target.value;
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 enableAmbientSoundsCheckbox.on("change", (event) => {
   window.appSettings.audio.enableAmbientSounds = jQuery(event.target).is(":checked");
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 enableChampSelectionSoundsCheckbox.on("change", (event) => {
   window.appSettings.audio.enableChampSelectionSounds = jQuery(event.target).is(":checked");
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 enableBanSoundsCheckbox.on("change", (event) => {
   window.appSettings.audio.enableBanSounds = jQuery(event.target).is(":checked");
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 enableMusicCheckbox.on("change", (event) => {
   window.appSettings.audio.enableMusic = jQuery(event.target).is(":checked");
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 
   if (jQuery(event.target).is(":checked")) {
     showMusicSettings();
@@ -80,17 +80,17 @@ enableMusicCheckbox.on("change", (event) => {
 
 musicVolumeInput.on("input", (event) => {
   window.appSettings.audio.musicVolume = event.target.value;
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 enableChampSelectMusicCheckbox.on("change", (event) => {
   window.appSettings.audio.enableChampSelectMusic = jQuery(event.target).is(":checked");
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 enableLobbyMusicCheckbox.on("change", (event) => {
   window.appSettings.audio.enableLobbyMusic = jQuery(event.target).is(":checked");
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 function initAudioSettingsDisplay() {

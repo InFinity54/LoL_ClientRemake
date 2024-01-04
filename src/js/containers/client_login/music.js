@@ -24,7 +24,7 @@ audioSettings_disableSound.change(function() {
   }
 
   window.appSettings.loginScreen.soundEnabled = !this.checked;
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 export { startLoginScreenMusic, stopLoginScreenMusic };

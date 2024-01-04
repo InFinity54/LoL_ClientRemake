@@ -2,7 +2,7 @@ const disableEsportNotificationCheckbox = jQuery("#settingsModal_client_notifica
 
 disableEsportNotificationCheckbox.on("change", (event) => {
   window.appSettings.notifications.disableEsportNotification = jQuery(event.target).is(":checked");
-  window.appApi.saveSettings(JSON.stringify(window.appSettings));
+  window.appAPI.saveSettings(JSON.stringify(window.appSettings));
 });
 
 function initNotificationsSettingsDisplay() {
