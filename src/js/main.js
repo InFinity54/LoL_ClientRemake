@@ -1,8 +1,8 @@
 const { app, BrowserWindow, ipcMain, Menu, session, net } = require('electron');
-import {autoUpdater} from "electron-updater";
-
+import { autoUpdater } from "electron-updater";
 const path = require('path');
 const fs = require("fs");
+const axios = require("axios");
 const isInProdMode = false;
 const settingsFilePath = path.join(app.getPath("userData"), "settings.json");
 
@@ -139,6 +139,20 @@ const createWindow = () => {
       });
 
       request.end();
+    });
+  });
+
+  ipcMain.handle('onlineImage', async (event, args) => {
+    return new Promise((resolve, reject) => {
+      try {
+        axios.get(args.url, { responseType: 'arraybuffer' }).then(response => {
+          const file = "data:" + response.headers.getContentType() + ";base64," + Buffer.from(response.data, 'binary').toString('base64');
+          resolve(file);
+        });
+      }
+      catch (err) {
+        reject(err);
+      }
     });
   });
 };

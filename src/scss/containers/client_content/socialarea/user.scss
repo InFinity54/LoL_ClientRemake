@@ -6,4 +6,84 @@
   height: 79px;
   border-bottom: 1px solid #3c474e;
   z-index: 991;
+
+  #clientContent_socialArea_user_profileIcon {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    width: 46px;
+    height: 46px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+  }
+
+  #clientContent_socialArea_user_levelContainer {
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 74px;
+    height: 74px;
+    background-image: url('../../../../../img/containers/client_content/social_area/user/user_profileiconborder.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+
+    #clientContent_socialArea_user_level {
+      position: absolute;
+      top: 56.5px;
+      left: 23px;
+      width: 28px;
+      height: 12px;
+      line-height: 12px;
+      font-family: 'Beaufort for LoL';
+      font-weight: 700;
+      font-size: 12px;
+      text-align: center;
+      color: #a09b8c;
+    }
+  }
+
+  #clientContent_socialArea_user_name {
+    position: absolute;
+    top: 24px;
+    left: 79px;
+    line-height: 29px;
+    font-family: 'Beaufort for LoL';
+    font-weight: 700;
+    font-size: 15px;
+    color: #e6dcc9;
+  }
+
+  #clientContent_socialArea_user_status {
+    position: absolute;
+    top: 52px;
+    left: 79px;
+    display: flex;
+    gap: 5px;
+
+    #clientContent_socialArea_user_statusIcon, #clientContent_socialArea_user_statusText {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    #clientContent_socialArea_user_statusIcon {
+      width: 7px;
+      height: 7px;
+      background-color: #1e825a;
+      border: 2px solid #36d987;
+      border-radius: 7px;
+    }
+
+    #clientContent_socialArea_user_statusText {
+      margin-top: -2px;
+      color: #008441;
+      font-size: 13px;
+      font-family: 'Spiegel', serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
 }

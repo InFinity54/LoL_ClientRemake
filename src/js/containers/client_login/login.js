@@ -85,16 +85,25 @@ function getUserBaseData() {
       window.appData.user.profileIconId = resultJson.content.profileIconId;
       window.appData.user.revisionDate = resultJson.content.revisionDate;
       window.appData.user.summonerLevel = resultJson.content.summonerLevel;
-
-      jQuery("#clientContent_socialArea_user_profileIcon").html(window.appData.user.profileIconId);
       jQuery("#clientContent_socialArea_user_level").html(window.appData.user.summonerLevel);
       jQuery("#clientContent_socialArea_user_name").html(window.appData.user.gameName);
-      currentLoginProgress = 100;
+      currentLoginProgress = 50;
+      displayUserProfileIcon();
     } else {
       clearInterval(loginProgressChecker);
       handleRiotApiError(resultJson.response._responseHead.statusCode);
       loadingPage.fadeOut(500);
     }
+  });
+}
+
+function displayUserProfileIcon() {
+  window.appAPI.onlineImage({
+    url: `https://leaguestats.infinity54.fr/riot/lol/latest/img/profileicon/${window.appData.user.profileIconId}.png`,
+    encoding: null
+  }).then((result) => {
+    jQuery("#clientContent_socialArea_user_profileIcon").css("background-image", "url(" + result + ")");
+    currentLoginProgress = 100;
   });
 }
 

@@ -22,5 +22,6 @@ contextBridge.exposeInMainWorld('appAPI', {
   updateSettings: (response) => ipcRenderer.on('updateSettings', (response)),
   saveSettings: (args) => ipcRenderer.invoke('saveSettings', args),
   openLink: (args) => ipcRenderer.invoke('openLink', args),
-  onlineRequest: (args) => ipcRenderer.invoke('onlineRequest', args)
+  onlineRequest: (args) => ipcRenderer.invoke('onlineRequest', args),
+  onlineImage: (args) => ipcRenderer.invoke('onlineImage', args)
 });
