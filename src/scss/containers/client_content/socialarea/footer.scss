@@ -1,0 +1,56 @@
+#clientContent_socialArea_footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 32px;
+  display: flex;
+  gap: 4px;
+  border-top: 1px solid #1e282d;
+
+  #clientContent_socialArea_footer_chatButton, #clientContent_socialArea_footer_missionsButton,
+  #clientContent_socialArea_footer_voiceButton, #clientContent_socialArea_footer_bugReportButton {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #clientContent_socialArea_footer_chatButton, #clientContent_socialArea_footer_missionsButton,
+  #clientContent_socialArea_footer_voiceButton,  {
+    width: 37px;
+    height: 32px;
+    background-position: 0 -156px;
+  }
+
+  #clientContent_socialArea_footer_chatButton {
+    background-image: url('../../../../../img/containers/client_content/social_area/footer/socialarea_footer_chatbutton.png');
+  }
+
+  #clientContent_socialArea_footer_missionsButton {
+    background-image: url('../../../../../img/containers/client_content/social_area/footer/socialarea_footer_missiontrackerbutton.png');
+  }
+
+  #clientContent_socialArea_footer_voiceButton {
+    background-image: url('../../../../../img/containers/client_content/social_area/footer/socialarea_footer_voicebutton.png');
+  }
+
+  #clientContent_socialArea_footer_leagueVersion {
+    display: inline-block;
+    width: 64px;
+    height: 32px;
+    color: #1c282f;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Beaufort for LOL', serif;
+    font-weight: 600;
+    line-height: 32px;
+    overflow: hidden;
+  }
+
+  #clientContent_socialArea_footer_bugReportButton {
+    width: 32px;
+    height: 32px;
+    background-image: url('../../../../../img/containers/client_content/social_area/footer/socialarea_footer_bugreportbutton.png');
+    background-position: 0 -97px;
+  }
+}

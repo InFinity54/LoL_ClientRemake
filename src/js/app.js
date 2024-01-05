@@ -74,7 +74,7 @@ window.updaterAPI.noUpdateAvailable((event) => {
     let resultJson = JSON.parse(result);
     resultJson.content = JSON.parse(resultJson.content);
     jQuery("#clientLogin_version").html(`V${resultJson.content.v}`);
-    //jQuery("#clientLogin_version").html(`V${resultJson.content.v.substring(0, resultJson.content.v.length - 2)}`);
+    jQuery("#clientContent_socialArea_footer_leagueVersion").html(`V${resultJson.content.v.substring(0, resultJson.content.v.length - 2)}`);
     loadingProgressBar.css("width", "100%");
 
     setTimeout(() => {
