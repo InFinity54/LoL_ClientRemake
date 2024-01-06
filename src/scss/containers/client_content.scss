@@ -38,7 +38,7 @@
     }
   }
 
-  #clientContent_mainArea:before, #clientContent_socialArea:before {
+  #clientContent_mainArea:before {
     content: ' ';
     display: block;
     position: absolute;
@@ -47,13 +47,10 @@
     width: 100%;
     height: 100%;
     opacity: 0.6;
-    background-image: url("../../../img/lol11.png");
+    background-image: url("../../../img/Capture d'écran 2024-01-05 174739.png");
+    background-position: center left;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  #clientContent_mainArea:before {
-    background-position: center left;
   }
 
   #clientContent_socialArea {
@@ -65,11 +62,21 @@
     background-color: #010a13;
 
     @import "client_content/socialarea/user";
+
+    #clientContent_socialArea_notificationButton {
+      position: absolute;
+      top: 50px;
+      right: 16px;
+      width: 12px;
+      height: 16px;
+      background-image: url('../../../img/containers/client_content/social_area/socialarea_notificationbutton.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.33;
+    }
+
     @import "client_content/socialarea/friends_list";
     @import "client_content/socialarea/footer";
-  }
-
-  #clientContent_socialArea:before {
-    background-position: center right;
   }
 }
