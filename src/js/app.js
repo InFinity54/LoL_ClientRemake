@@ -6,7 +6,7 @@ import { enableLoginButton } from "./containers/client_login/login";
 const loadingProgressBar = jQuery("#clientLoading_currentProgress");
 const loadingProgressText = jQuery("#clientLoading_progressText");
 
-window.riotApiKey = "RGAPI-8feba3eb-2e08-41b1-9f2f-edd7e4b4494f";
+window.riotApiKey = "RGAPI-9a0a803c-7b3e-42f8-943b-7d3356ccb6a5";
 
 window.appData = {
   league: {

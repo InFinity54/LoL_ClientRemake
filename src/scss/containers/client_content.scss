@@ -35,10 +35,13 @@
       }
 
       @import "client_content/menu/playbutton";
+      @import "client_content/menu/elements";
+      @import "client_content/menu/icons";
+      @import "client_content/menu/money";
     }
   }
 
-  #clientContent_mainArea:before {
+  /*#clientContent_mainArea:before {
     content: ' ';
     display: block;
     position: absolute;
@@ -51,7 +54,7 @@
     background-position: center left;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  }*/
 
   #clientContent_socialArea {
     position: absolute;

@@ -1,0 +1,65 @@
+#clientContent_menuMoney {
+  width: 117px;
+  margin-left: 14px;
+}
+
+.clientContent_menuMoney_line {
+  width: 117px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  font-family: 'Beaufort for LoL';
+  font-weight: 700;
+  font-size: 16px;
+  color: #eee4d0;
+}
+
+.clientContent_menuMoney_line:first-child {
+  margin-top: 10px;
+}
+
+#clientContent_menuMoney_rp {
+  background-color: #010a13;
+  border: 1px solid #51534f;
+  border-radius: 28px;
+}
+
+#clientContent_moneyRP, #clientContent_moneyEB {
+  display: inline-block;
+  height: 15px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+#clientContent_moneyRP {
+  width: 15px;
+  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rp_icon.svg');
+}
+
+#clientContent_moneyEB {
+  width: 16px;
+  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/eb_icon.png');
+}
+
+#clientContent_moneyRP_quickBuyButton {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rpquickbuy/rpquickbuy_normal.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+#clientContent_moneyRP_quickBuyButton:hover {
+  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rpquickbuy/rpquickbuy_hover.png');
+}
+
+#clientContent_moneyRP_quickBuyButton:active {
+  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rpquickbuy/rpquickbuy_pressed.png');
+}

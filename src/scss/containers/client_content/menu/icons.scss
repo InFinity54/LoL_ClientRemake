@@ -1,0 +1,29 @@
+.clientContent_menuIcon {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.25s;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: auto auto;
+}
+
+#clientContent_menu_clashIcon {
+  -webkit-mask-image: url('../../../../../img/containers/client_content/main_area/menu/icons/menu_elementicon_clash.svg');
+}
+
+#clientContent_menu_collectionIcon {
+  -webkit-mask-image: url('../../../../../img/containers/client_content/main_area/menu/icons/menu_elementicon_collection.svg');
+}
+
+#clientContent_menu_lootIcon {
+  -webkit-mask-image: url('../../../../../img/containers/client_content/main_area/menu/icons/menu_elementicon_loot.svg');
+}
+
+#clientContent_menu_profileIcon {
+  -webkit-mask-image: url('../../../../../img/containers/client_content/main_area/menu/icons/menu_elementicon_profile.svg');
+}
+
+#clientContent_menu_shopIcon {
+  -webkit-mask-image: url('../../../../../img/containers/client_content/main_area/menu/icons/menu_elementicon_shop.svg');
+}
