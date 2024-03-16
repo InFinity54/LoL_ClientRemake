@@ -48,7 +48,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rpquickbuy/rpquickbuy_normal.png');
+  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rpquickbuy/rpquickbuy_normal.svg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -57,9 +57,9 @@
 }
 
 #clientContent_moneyRP_quickBuyButton:hover {
-  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rpquickbuy/rpquickbuy_hover.png');
+  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rpquickbuy/rpquickbuy_hover.svg');
 }
 
 #clientContent_moneyRP_quickBuyButton:active {
-  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rpquickbuy/rpquickbuy_pressed.png');
+  background-image: url('../../../../../img/containers/client_content/main_area/menu/money/rpquickbuy/rpquickbuy_pressed.svg');
 }
