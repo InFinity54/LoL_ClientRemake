@@ -1,0 +1,19 @@
+#clientContent_page_home_preview, #clientContent_page_home_patchnotes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 115px);
+  padding-top: 115px;
+}
+
+#clientContent_page_home_preview {
+  background-image: url('../../../../../img/containers/client_content/main_area/pages/home/home_preview_background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#clientContent_page_home_patchnotes {
+  background-color: #010a13;
+}

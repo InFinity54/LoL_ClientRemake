@@ -39,22 +39,78 @@
       @import "client_content/menu/icons";
       @import "client_content/menu/money";
     }
-  }
 
-  /*#clientContent_mainArea:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-    background-image: url("../../../img/Capture d'écran 2024-01-05 174739.png");
-    background-position: center left;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }*/
+    #clientContent_menuBackground {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 112px;
+      background: linear-gradient(180deg, rgba(1, 10, 19, 1) 0%, rgba(1, 10, 19, 0.66) 71.43%, rgba(1, 10, 19, 0) 100%);
+      z-index: 988;
+    }
+
+    .clientContent_page, .clientContent_pageTab {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .clientContent_page {
+      height: calc(100% - 80px);
+      padding-top: 80px;
+    }
+
+    .clientContent_pageTab {
+      height: calc(100% - 115px);
+      padding-top: 115px;
+    }
+
+    .clientContent_pageTab:not(.clientContent_pageTabActive) {
+      display: none;
+    }
+
+    .clientContent_pageMenu {
+      position: absolute;
+      top: 86px;
+      left: 0;
+      width: calc(100% - 96px);
+      height: 23px;
+      z-index: 989;
+      display: flex;
+      gap: 20px;
+      padding-left: 48px;
+      padding-right: 48px;
+
+      .clientContent_pageMenuItem {
+        width: fit-content;
+        height: 23px;
+        font-family: 'Beaufort for LoL';
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #c2b58b;
+        line-height: 23px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .clientContent_pageMenuItemActive, .clientContent_pageMenuItem:hover {
+        color: #eee4d0;
+      }
+
+      .clientContent_pageMenuItemActive {
+        background-image: url('../../../img/containers/client_content/main_area/pages/pagemenu_active.png');
+        background-position: bottom center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    @import "client_content/pages/home";
+  }
 
   #clientContent_socialArea {
     position: absolute;

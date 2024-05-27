@@ -15,6 +15,7 @@ import "./containers/client_loading/loading";
 import "./containers/window_buttons/buttons";
 import "./containers/client_login/video";
 import "./containers/client_login/login";
+import "./containers/client_content/pages/home/pagetabs";
 
 // JS for UI
 import "./ui/form/select";
