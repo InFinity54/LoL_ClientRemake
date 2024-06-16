@@ -99,7 +99,7 @@ function getUserBaseData() {
 
 function displayUserProfileIcon() {
   window.appAPI.onlineImage({
-    url: `https://leaguestats.infinity54.fr/riot/lol/latest/img/profileicon/${window.appData.user.profileIconId}.png`,
+    url: `https://ddragon.infinity54.fr/lol/latest/img/profileicon/${window.appData.user.profileIconId}.png`,
     encoding: null
   }).then((result) => {
     jQuery("#clientContent_socialArea_user_profileIcon").css("background-image", "url(" + result + ")");

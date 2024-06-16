@@ -6,7 +6,7 @@ import { enableLoginButton } from "./containers/client_login/login";
 const loadingProgressBar = jQuery("#clientLoading_currentProgress");
 const loadingProgressText = jQuery("#clientLoading_progressText");
 
-window.riotApiKey = "RGAPI-95df484f-fe4b-450c-8188-7d41e2d897ec";
+window.riotApiKey = "RGAPI-e8abe2a1-d628-4972-b346-8ab4c6ac9b87";
 
 window.appData = {
   league: {
@@ -69,7 +69,7 @@ window.appAPI.updateSettings((event, args) => {
 
 window.updaterAPI.noUpdateAvailable((event) => {
   window.appAPI.onlineRequest({
-    url: 'https://leaguestats.infinity54.fr/riot/lol/latest/manifest.json'
+    url: 'https://ddragon.infinity54.fr/lol/latest/manifest.json'
   }).then((result) => {
     let resultJson = JSON.parse(result);
     resultJson.content = JSON.parse(resultJson.content);
