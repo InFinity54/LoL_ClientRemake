@@ -264,9 +264,10 @@
   optionalDependencies:
     global-agent "^3.0.0"
 
-"@electron/node-gyp@git+https://github.com/electron/node-gyp.git#06b29aafb7708acef8b3669835c8a7857ebc92d2":
+"@electron/node-gyp@https://github.com/electron/node-gyp#06b29aafb7708acef8b3669835c8a7857ebc92d2":
   version "10.2.0-electron.1"
-  resolved "git+https://github.com/electron/node-gyp.git#06b29aafb7708acef8b3669835c8a7857ebc92d2"
+  uid "06b29aafb7708acef8b3669835c8a7857ebc92d2"
+  resolved "https://github.com/electron/node-gyp#06b29aafb7708acef8b3669835c8a7857ebc92d2"
   dependencies:
     env-paths "^2.2.0"
     exponential-backoff "^3.1.1"
@@ -3525,9 +3526,9 @@ locate-path@^6.0.0:
     p-locate "^5.0.0"
 
 locutus@^2.0.11:
-  version "2.0.38"
-  resolved "https://registry.yarnpkg.com/locutus/-/locutus-2.0.38.tgz#1e7f6077a9fc2985cf58aef5591e2ff4eb961df0"
-  integrity sha512-7da0VqzP8gor2VsqnLjV3m88ELplov22887Ux558zkIjRdkcc9qsXN5Ifx15ImSg8y+0VY3VXBmwUZYGYR0Drg==
+  version "2.0.39"
+  resolved "https://registry.yarnpkg.com/locutus/-/locutus-2.0.39.tgz#080277b4c766fdc58c053ecfdbd2ad7254db9d85"
+  integrity sha512-v2iub44UtGpbIv+pFkkYhZ+JsbIM0bJsQcQ1+VayUNGVA/YhM8+CkBiRACcpuuE9Q0xI1pgNzGNwzZDCp1MCww==
 
 lodash.escaperegexp@^4.1.2:
   version "4.1.2"
